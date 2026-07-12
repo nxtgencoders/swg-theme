@@ -1,0 +1,12 @@
+{
+    "name": "SWG Theme",
+    "description": "Official Astro theme for Static Website Generator.",
+    "version": "1.0.0",
+    "author": "",
+    "license": "MIT",
+    "homepage": "",
+    "repository": "",
+    "preview": "public/preview.webp",
+    "framework": "tailwind",
+    "astro": "^5.0.0"
+}

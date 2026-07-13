@@ -1,8 +1,61 @@
-# SWG Theme
+# SWG Theme Starter
 
-The official Astro Theme Starter for **Static Website Generator (SWG)**.
+The official Astro starter theme for **Static Website Generator (SWG)**.
 
-This repository provides the reference implementation of the SWG Theme Specification.
+Build fast, modern static websites using Astro, JSON content and reusable themes.
+
+---
+
+# Quick Start
+
+Clone the repository:
+
+```bash
+git clone https://github.com/nxtgencoders/swg-theme.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Validate the theme:
+
+```bash
+npm run validate
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Create a distributable theme package:
+
+```bash
+npm run package
+```
+
+---
+
+The demo website is available at:
+
+```
+http://localhost:4321
+```
+
+---
+
+Continue reading below for the complete project structure and documentation.
+
 
 ## Features
 

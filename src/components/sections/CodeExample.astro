@@ -1,3 +1,28 @@
+---
+import CodeBlock
+    from '../components/marketing/CodeBlock.astro';
+
+const code = `{
+  "title": "Homepage",
+  "slug": "homepage",
+  "template": "homepage",
+  "sections": [
+    {
+      "type": "hero"
+    },
+    {
+      "type": "features-grid"
+    },
+    {
+      "type": "benefits-grid"
+    },
+    {
+      "type": "faq"
+    }
+  ]
+}`;
+---
+
 <section
     class="py-24"
 >
@@ -149,49 +174,10 @@
         </div>
 
         <div>
-
-            <div
-                class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl"
-            >
-
-                <div
-                    class="flex items-center gap-2 border-b border-slate-800 px-5 py-4"
-                >
-
-                    <span class="h-3 w-3 rounded-full bg-red-500"></span>
-
-                    <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
-
-                    <span class="h-3 w-3 rounded-full bg-green-500"></span>
-
-                </div>
-
-<pre class="overflow-x-auto p-6 text-sm leading-7 text-slate-300"><code>{
-  "title": "Homepage",
-  "slug": "homepage",
-  "template": "homepage",
-  "sections": [
-
-    {
-      "type": "hero"
-    },
-
-    {
-      "type": "features-grid"
-    },
-
-    {
-      "type": "benefits-grid"
-    },
-
-    {
-      "type": "faq"
-    }
-
-  ]
-}</code></pre>
-
-            </div>
+    
+            <CodeBlock
+                code={code}
+            />
 
         </div>
 

@@ -1,0 +1,35 @@
+---
+export interface Props {
+    code: string;
+    language?: string;
+}
+
+const {
+    code,
+    language = 'json'
+} = Astro.props;
+---
+
+<div
+    class="overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-2xl"
+>
+
+    <div
+        class="flex items-center gap-2 border-b border-slate-800 px-5 py-4"
+    >
+
+        <span class="h-3 w-3 rounded-full bg-red-500"></span>
+        <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+        <span class="h-3 w-3 rounded-full bg-green-500"></span>
+        <span
+            class="ml-4 text-xs uppercase tracking-wider text-slate-500"
+        >
+            {language}
+
+        </span>
+
+    </div>
+
+    <pre class="overflow-x-auto p-6 text-sm leading-7 text-slate-300"><code>{code}</code></pre>
+
+</div>

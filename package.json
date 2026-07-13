@@ -8,8 +8,10 @@
         "dev": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "check": "astro check"
-    },
+        "check": "astro check",
+        "swg:validate": "node bin/swg.mjs validate",
+        "swg:package": "node bin/swg.mjs package"
+         },
     "dependencies": {
         "astro": "^5.13.5"
     }

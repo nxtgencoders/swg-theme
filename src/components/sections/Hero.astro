@@ -9,14 +9,16 @@ const code = `{
 ---
 
 <section
-    class="overflow-hidden py-24 sm:py-32"
+    class="overflow-hidden py-16 sm:py-20 lg:py-24"
 >
 
     <div
-        class="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2 lg:px-8"
+        class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_1.1fr] lg:gap-20 lg:px-8"
     >
 
-        <div>
+        <div
+            class="max-w-2xl"
+        >
 
             <span
                 class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-medium text-[#1C64A5]"
@@ -27,34 +29,41 @@ const code = `{
             </span>
 
             <h1
-                class="mt-6 text-5xl font-extrabold leading-tight tracking-tight text-slate-900 lg:text-6xl"
+                class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
             >
 
-                Build blazing fast static websites
-               
-                <span class="text-[#1C64A5]">
-                     with Static Website Generator
-                     </span>.
+                Build blazing fast
+                <br />
+
+                static websites
+
+                <span
+                    class="block mt-2 text-[#1C64A5]"
+                >
+
+                    with Static Website Generator.
+
+                </span>
 
             </h1>
 
             <p
-                class="mt-6 max-w-xl text-lg leading-8 text-slate-600"
+                class="mt-8 max-w-xl text-lg leading-8 text-slate-600"
             >
 
                 Create blogs, documentation websites and business
-                websites using JSON content, Astro themes and a modern
-                publishing workflow.
+                websites using structured JSON content, reusable Astro
+                themes and a modern publishing workflow.
 
             </p>
 
             <div
-                class="mt-10 flex flex-wrap gap-4"
+                class="mt-10 flex flex-col gap-4 sm:flex-row"
             >
 
                 <a
                     href="/docs/getting-started"
-                    class="rounded-lg bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                    class="inline-flex items-center justify-center rounded-xl bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:bg-[#17548a]"
                 >
 
                     Get Started
@@ -63,7 +72,7 @@ const code = `{
 
                 <a
                     href="/themes"
-                    class="rounded-lg border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-[#1C64A5] hover:text-[#1C64A5]"
+                    class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-[#1C64A5] hover:text-[#1C64A5]"
                 >
 
                     Browse Themes
@@ -73,7 +82,7 @@ const code = `{
             </div>
 
             <p
-                class="mt-6 text-sm text-slate-500"
+                class="mt-8 text-sm text-slate-500"
             >
 
                 Free • Open Source • Built with Astro
@@ -82,11 +91,14 @@ const code = `{
 
         </div>
 
-        <div>
+        <div
+            class="mx-auto w-full max-w-xl lg:max-w-none"
+        >
 
             <CodeBlock
                 code={code}
             />
+
         </div>
 
     </div>

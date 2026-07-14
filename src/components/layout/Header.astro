@@ -1,3 +1,33 @@
+---
+import {
+    getMenu
+}
+from '../../lib/menus';
+
+const menu =
+    getMenu(
+        'main'
+    );
+
+const logo =
+    menu?.categories.find(
+        category =>
+            category.title === 'Logo'
+    );
+
+const navigation =
+    menu?.categories.find(
+        category =>
+            category.title === 'Navigation'
+    );
+
+const cta =
+    menu?.categories.find(
+        category =>
+            category.title === 'CTA'
+    );
+---
+
 <header
     class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur"
 >
@@ -6,96 +36,77 @@
         class="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8"
     >
 
-        <a
-            href="/"
-            class="flex items-center gap-3"
-        >
+        {
+            logo?.items[0] && (
 
-            <div
-                class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#299B36]/10 text-[#299B36]"
-            >
-                <i
-                    data-lucide="blocks"
-                    class="h-6 w-6"
-                ></i>
-            </div>
+                <a
+                    href={logo.items[0].url}
+                    class="flex items-center gap-3"
+                >
 
-            <span
-                class="text-[34px] font-extrabold tracking-tight text-[#1C64A5]"
-            >
-                SWG
-            </span>
+                    <div
+                        class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#299B36]/10 text-[#299B36]"
+                    >
 
-        </a>
+                        <i
+                            data-lucide="blocks"
+                            class="h-6 w-6"
+                        ></i>
+
+                    </div>
+
+                    <span
+                        class="text-[34px] font-extrabold tracking-tight text-[#1C64A5]"
+                    >
+
+                        {logo.items[0].label}
+
+                    </span>
+
+                </a>
+
+            )
+        }
 
         <nav
             class="hidden items-center gap-8 text-sm font-medium text-slate-700 md:flex"
         >
 
-            <a
-                href="/features"
-                class="transition hover:text-[#1C64A5]"
-            >
+            {
+                navigation?.items.map(
+                    item => (
 
-                Features
+                        <a
+                            href={item.url}
+                            class="transition hover:text-[#1C64A5]"
+                            target={item.target || undefined}
+                        >
 
-            </a>
+                            {item.label}
 
-            <a
-                href="/docs"
-                class="transition hover:text-[#1C64A5]"
-            >
+                        </a>
 
-                Docs
-
-            </a>
-
-            <a
-                href="/blog"
-                class="transition hover:text-[#1C64A5]"
-            >
-
-                Blog
-
-            </a>
-
-            <a
-                href="/pricing"
-                class="transition hover:text-[#1C64A5]"
-            >
-
-                Pricing
-
-            </a>
-
-            <a
-                href="/about"
-                class="transition hover:text-[#1C64A5]"
-            >
-
-                About
-
-            </a>
-
-            <a
-                href="/contact"
-                class="transition hover:text-[#1C64A5]"
-            >
-
-                Contact
-
-            </a>
+                    )
+                )
+            }
 
         </nav>
 
-        <a
-            href="/docs/getting-started"
-            class="rounded-lg bg-[#1C64A5] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 hover:bg-[#17548a]"
-        >
+        {
+            cta?.items[0] && (
 
-            Get Started
+                <a
+                    href={cta.items[0].url}
+                    class="rounded-lg bg-[#1C64A5] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#17548a] hover:opacity-90"
+                    target={cta.items[0].target || undefined}
+                >
 
-        </a>
+                    {cta.items[0].label}
+
+                </a>
+
+            )
+        }
 
     </div>
 

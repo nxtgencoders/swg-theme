@@ -1,3 +1,23 @@
+---
+import {
+    getMenu
+}
+from '../../lib/menus';
+
+import {
+    getSettings
+}
+from '../../lib/settings';
+
+const menu =
+    getMenu(
+        'footer'
+    );
+
+const settings =
+    getSettings();
+---
+
 <footer
     class="border-t border-slate-200 bg-slate-950 text-slate-300"
 >
@@ -6,212 +26,53 @@
         class="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4 lg:px-8"
     >
 
-        <div>
+        {
+            menu?.categories.map(
+                category => (
 
-            <a
-                href="/"
-                class="text-2xl font-extrabold tracking-tight text-white"
-            >
+                    <div>
 
-                SWG
+                        <h3
+                            class="font-semibold text-white"
+                        >
 
-            </a>
+                            {category.title}
 
-            <p
-                class="mt-6 leading-7 text-slate-400"
-            >
+                        </h3>
 
-                Build blazing fast static websites with Astro,
-                structured JSON content and a modern publishing
-                workflow.
+                        <ul
+                            class="mt-6 space-y-3"
+                        >
 
-            </p>
+                            {
+                                category.items.map(
+                                    item => (
 
-        </div>
+                                        <li>
 
-        <div>
+                                            <a
+                                                href={item.url}
+                                                target={item.target || undefined}
+                                                class="transition hover:text-white"
+                                            >
 
-            <h3
-                class="font-semibold text-white"
-            >
+                                                {item.label}
 
-                Product
+                                            </a>
 
-            </h3>
+                                        </li>
 
-            <ul
-                class="mt-6 space-y-3"
-            >
+                                    )
+                                )
+                            }
 
-                <li>
+                        </ul>
 
-                    <a
-                        href="/features"
-                        class="transition hover:text-white"
-                    >
+                    </div>
 
-                        Features
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/pricing"
-                        class="transition hover:text-white"
-                    >
-
-                        Pricing
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/themes"
-                        class="transition hover:text-white"
-                    >
-
-                        Themes
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h3
-                class="font-semibold text-white"
-            >
-
-                Resources
-
-            </h3>
-
-            <ul
-                class="mt-6 space-y-3"
-            >
-
-                <li>
-
-                    <a
-                        href="/docs"
-                        class="transition hover:text-white"
-                    >
-
-                        Documentation
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/blog"
-                        class="transition hover:text-white"
-                    >
-
-                        Blog
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/docs/getting-started"
-                        class="transition hover:text-white"
-                    >
-
-                        Getting Started
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h3
-                class="font-semibold text-white"
-            >
-
-                Company
-
-            </h3>
-
-            <ul
-                class="mt-6 space-y-3"
-            >
-
-                <li>
-
-                    <a
-                        href="/about"
-                        class="transition hover:text-white"
-                    >
-
-                        About
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/contact"
-                        class="transition hover:text-white"
-                    >
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/privacy-policy"
-                        class="transition hover:text-white"
-                    >
-
-                        Privacy Policy
-
-                    </a>
-
-                </li>
-
-                <li>
-
-                    <a
-                        href="/terms-of-service"
-                        class="transition hover:text-white"
-                    >
-
-                        Terms of Service
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
+                )
+            )
+        }
 
     </div>
 
@@ -225,7 +86,7 @@
 
             <p>
 
-                &copy; 2026 Static Website Generator. All rights reserved.
+                {settings.footer}
 
             </p>
 

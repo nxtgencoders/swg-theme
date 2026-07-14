@@ -1,0 +1,81 @@
+{
+    "name": "footer",
+    "label": "Footer Navigation",
+    "categories": [
+        {
+            "title": "Product",
+            "items": [
+                {
+                    "label": "Features",
+                    "url": "/features",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Pricing",
+                    "url": "/pricing",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Themes",
+                    "url": "/themes",
+                    "css_class": null,
+                    "target": null
+                }
+            ]
+        },
+        {
+            "title": "Resources",
+            "items": [
+                {
+                    "label": "Documentation",
+                    "url": "/docs",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Blog",
+                    "url": "/blog",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Getting Started",
+                    "url": "/docs/getting-started",
+                    "css_class": null,
+                    "target": null
+                }
+            ]
+        },
+        {
+            "title": "Company",
+            "items": [
+                {
+                    "label": "About",
+                    "url": "/about",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Contact",
+                    "url": "/contact",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Privacy Policy",
+                    "url": "/privacy-policy",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Terms of Service",
+                    "url": "/terms-of-service",
+                    "css_class": null,
+                    "target": null
+                }
+            ]
+        }
+    ]
+}

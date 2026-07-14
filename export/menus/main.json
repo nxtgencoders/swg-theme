@@ -1,0 +1,69 @@
+{
+    "name": "main",
+    "label": "Main Navigation",
+    "categories": [
+        {
+            "title": "Logo",
+            "items": [
+                {
+                    "label": "SWG",
+                    "url": "/",
+                    "css_class": null,
+                    "target": null
+                }
+            ]
+        },
+        {
+            "title": "Navigation",
+            "items": [
+                {
+                    "label": "Features",
+                    "url": "/features",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Pricing",
+                    "url": "/pricing",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "About",
+                    "url": "/about",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Contact",
+                    "url": "/contact",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Blog",
+                    "url": "/blog",
+                    "css_class": null,
+                    "target": null
+                },
+                {
+                    "label": "Documentation",
+                    "url": "/docs",
+                    "css_class": null,
+                    "target": null
+                }
+            ]
+        },
+        {
+            "title": "CTA",
+            "items": [
+                {
+                    "label": "Get Started",
+                    "url": "/docs/getting-started",
+                    "css_class": "nav-cta",
+                    "target": null
+                }
+            ]
+        }
+    ]
+}

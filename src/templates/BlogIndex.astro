@@ -35,6 +35,11 @@ const articles =
                 ).getTime()
         );
 
+const category =
+    getCategory(
+        article.category_id
+    );
+
 const page = {
 
     title: 'Blog',
@@ -175,7 +180,7 @@ const page = {
                                 >
 
                                     <a
-                                        href={`/blog/${article.slug}`}
+                                        href={`/blog/${category.slug}/${article.slug}`}
                                         class="transition hover:text-[#1C64A5]"
                                     >
 
@@ -200,7 +205,7 @@ const page = {
                                 }
 
                                 <a
-                                    href={`/blog/${article.slug}`}
+                                    href={`/blog/${category.slug}/${article.slug}`}
                                     class="mt-8 inline-flex items-center font-semibold text-[#1C64A5] transition hover:gap-3"
                                 >
 

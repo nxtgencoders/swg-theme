@@ -1,0 +1,58 @@
+---
+import BlogArticleTemplate
+    from '../../../templates/BlogArticle.astro';
+
+import {
+    getArticles,
+    getArticle,
+    getCategory
+}
+from '../../../lib/blog';
+
+export async function getStaticPaths() {
+
+    return getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .map(
+            article => ({
+
+                params: {
+
+                    slug:
+                        article.slug
+
+                }
+
+            })
+        );
+
+}
+
+const article =
+    getArticle(
+        Astro.params.slug!
+    );
+
+if (!article) {
+
+    throw new Error(
+        `Blog article '${Astro.params.slug}' not found.`
+    );
+
+}
+
+const category =
+    getCategory(
+        article.category_id
+    );
+---
+
+<BlogArticleTemplate
+    article={article}
+    category={category}
+/>

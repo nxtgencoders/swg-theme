@@ -76,6 +76,29 @@
                     "target": null
                 }
             ]
+        },
+                {
+            "title": "Technology",
+            "items": [
+                {
+                    "label": "Astro",
+                    "url": "https://astro.build",
+                    "css_class": null,
+                    "target": "_blank"
+                },
+                {
+                    "label": "Tailwind CSS",
+                    "url": "https://tailwindcss.com",
+                    "css_class": null,
+                    "target": "_blank"
+                },
+                {
+                    "label": "GitHub",
+                    "url": "https://github.com",
+                    "css_class": null,
+                    "target": "_blank"
+                }
+            ]
         }
     ]
 }

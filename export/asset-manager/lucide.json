@@ -1,0 +1,14 @@
+{
+    "id": "lucide",
+    "name": "Lucide Icons",
+    "description": "Load Lucide icon library",
+    "sort_order": 20,
+    "type": "script",
+    "location": "head",
+    "enabled": true,
+    "settings": {
+        "source": "external",
+        "url": "https://cdn.jsdelivr.net/npm/lucide@1.24.0/dist/umd/lucide.min.js",
+        "content": ""
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "id": "lucide-init",
+    "name": "Initialize Lucide",
+    "description": "Render all Lucide icons",
+    "sort_order": 100,
+    "type": "script",
+    "location": "footer",
+    "enabled": true,
+    "settings": {
+        "source": "inline",
+        "url": "",
+        "content": "lucide.createIcons();"
+    }
+}

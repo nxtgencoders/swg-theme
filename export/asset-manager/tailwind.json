@@ -1,0 +1,14 @@
+{
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "description": "Load Tailwind CSS Browser CDN",
+    "sort_order": 10,
+    "type": "script",
+    "location": "head",
+    "enabled": true,
+    "settings": {
+        "source": "external",
+        "url": "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4",
+        "content": ""
+    }
+}

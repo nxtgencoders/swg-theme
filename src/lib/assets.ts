@@ -39,7 +39,7 @@ const assetsDirectory =
     path.join(
         process.cwd(),
         'export',
-        'assets'
+        'asset-manager'
     );
 
 /**

@@ -1,38 +1,68 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const pagesDir =
+export interface Page {
+    id: number;
+    title: string;
+    slug: string;
+    template: string;
+    [key: string]: any;
+}
+
+const pagesDirectory =
     path.join(
         process.cwd(),
-        'export/pages'
+        'export',
+        'pages'
     );
 
-export function getPages() {
+/**
+ * Returns all exported pages.
+ */
+export function getPages(): Page[] {
 
     return fs
-        .readdirSync(pagesDir)
+
+        .readdirSync(
+            pagesDirectory
+        )
+
+        .filter(
+            file =>
+                file.endsWith('.json')
+        )
+
         .map(file => {
 
             const json =
                 fs.readFileSync(
                     path.join(
-                        pagesDir,
+                        pagesDirectory,
                         file
                     ),
                     'utf8'
                 );
 
-            return JSON.parse(json);
+            return JSON.parse(
+                json
+            ) as Page;
+
         });
+
 }
 
+/**
+ * Returns a page by slug.
+ */
 export function getPage(
     slug: string
-) {
+): Page | undefined {
 
     return getPages()
+
         .find(
             page =>
                 page.slug === slug
         );
+
 }

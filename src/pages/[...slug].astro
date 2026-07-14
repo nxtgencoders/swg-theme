@@ -5,9 +5,7 @@ import Page
 import {
     getPages,
     getPage
-}
-from '../lib/pages';
-
+}   from '../lib/pages';
 
 export async function getStaticPaths() {
 
@@ -28,6 +26,7 @@ export async function getStaticPaths() {
             }
 
         }));
+
 }
 
 const page =
@@ -35,8 +34,14 @@ const page =
         Astro.params.slug!
     );
 
+if (!page) {
 
+    throw new Error(
+        `Page '${Astro.params.slug}' not found.`
+    );
+
+}
 ---
 
-<Page />
+<Page page={page} />
 

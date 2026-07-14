@@ -48,53 +48,65 @@ const settings =
 </div>
 
 
-        {
-            menu?.categories.map(
-                category => (
+{
+    menu?.categories
 
-                    <div>
+        .filter(
+            category =>
+                category.title !== 'Technology'
+        )
 
-                        <h3
-                            class="font-semibold text-white"
-                        >
+        .map(
+            category => (
 
-                            {category.title}
+                <div>
 
-                        </h3>
+                    <h3
+                        class="font-semibold text-white"
+                    >
 
-                        <ul
-                            class="mt-6 space-y-3"
-                        >
+                        {category.title}
 
-                            {
-                                category.items.map(
-                                    item => (
+                    </h3>
 
-                                        <li>
+                    <ul
+                        class="mt-6 space-y-3"
+                    >
 
-                                            <a
-                                                href={item.url}
-                                                target={item.target || undefined}
-                                                class="transition hover:text-white"
-                                            >
+                        {
+                            category.items.map(
+                                item => (
 
-                                                {item.label}
+                                    <li>
 
-                                            </a>
+                                        <a
+                                            href={item.url}
+                                            target={item.target || undefined}
+                                            rel={
+                                                item.target === '_blank'
+                                                    ? 'noopener noreferrer'
+                                                    : undefined
+                                            }
+                                            class="transition hover:text-white"
+                                        >
 
-                                        </li>
+                                            {item.label}
 
-                                    )
+                                        </a>
+
+                                    </li>
+
                                 )
-                            }
+                            )
+                        }
 
-                        </ul>
+                    </ul>
 
-                    </div>
+                </div>
 
-                )
             )
-        }
+        )
+}
 
     </div>
 
@@ -116,33 +128,33 @@ const settings =
                     class="flex items-center gap-6"
                 >
 
-                {
-                    menu?.categories
-                        .find(
-                            category =>
-                                category.title === 'Technology'
+            {
+                menu?.categories
+                    .find(
+                        category =>
+                            category.title === 'Technology'
+                    )
+                    ?.items.map(
+                        item => (
+
+                            <a
+                                href={item.url}
+                                target={item.target || undefined}
+                                rel={
+                                    item.target === '_blank'
+                                        ? 'noopener noreferrer'
+                                        : undefined
+                                }
+                                class="transition hover:text-white"
+                            >
+
+                                {item.label}
+
+                            </a>
+
                         )
-                        ?.items.map(
-                            item => (
-
-                                <a
-                                    href={item.url}
-                                    target={item.target || undefined}
-                                    rel={
-                                        item.target === '_blank'
-                                            ? 'noopener noreferrer'
-                                            : undefined
-                                    }
-                                    class="transition hover:text-white"
-                                >
-
-                                    {item.label}
-
-                                </a>
-
-                            )
-                        )
-                }
+                    )
+            }
 
                 </div>
 

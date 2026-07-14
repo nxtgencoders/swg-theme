@@ -90,6 +90,53 @@
                         ]
 
                     }
+                },
+                {
+                    "type": "features-grid",
+                    "data": {
+
+                        "eyebrow": "Features",
+
+                        "title": "Everything you need to build modern static websites.",
+
+                        "subtitle": "Build blogs, documentation websites and business websites using JSON content and reusable Astro themes.",
+
+                        "cards": [
+
+                            {
+                                "icon": "zap",
+                                "title": "Lightning Fast",
+                                "description": "Generate blazing fast static websites powered by Astro for outstanding performance and SEO."
+                            },
+                            {
+                                "icon": "palette",
+                                "title": "Theme Driven",
+                                "description": "Create reusable Astro themes that can be imported, shared and reused across multiple websites."
+                            },
+                            {
+                                "icon": "file-json",
+                                "title": "JSON Content",
+                                "description": "JSON remains the single source of truth while Astro focuses purely on rendering beautiful websites."
+                            },
+                            {
+                                "icon": "rocket",
+                                "title": "One Click Deploy",
+                                "description": "Export your content, build your Astro project and deploy your website with confidence."
+                            },
+                            {
+                                "icon": "search-check",
+                                "title": "SEO Ready",
+                                "description": "Generate clean HTML, metadata and structured content optimized for search engines."
+                            },
+                            {
+                                "icon": "sparkles",
+                                "title": "AI Assisted",
+                                "description": "Generate themes, pages and content faster using the built-in AI tooling."
+                            }
+
+                        ]
+
+                    }
                 }
         ]
 }

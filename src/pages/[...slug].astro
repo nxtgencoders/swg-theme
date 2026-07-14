@@ -2,11 +2,41 @@
 import Page
     from '../templates/Page.astro';
 
-export function getStaticPaths() {
-
-    return [];
-
+import {
+    getPages,
+    getPage
 }
+from '../lib/pages';
+
+
+export async function getStaticPaths() {
+
+    return getPages()
+
+        .filter(
+            page =>
+                !page.is_homepage
+        )
+
+        .map(page => ({
+
+            params: {
+
+                slug:
+                    page.slug
+
+            }
+
+        }));
+}
+
+const page =
+    getPage(
+        Astro.params.slug!
+    );
+
+
 ---
 
 <Page />
+

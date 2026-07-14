@@ -1,0 +1,33 @@
+{
+    "id": 2,
+    "title": "Features",
+    "slug": "features",
+    "status": "published",
+    "published_at": "2026-07-14 09:00:00",
+    "created_at": "2026-07-14 09:00:00",
+    "updated_at": "2026-07-14 09:00:00",
+    "is_homepage": 0,
+    "template": "page",
+    "editor": "markdown",
+    "meta_title": "Features | Static Website Generator",
+    "meta_description": "Discover the powerful features of Static Website Generator. Build fast, secure and SEO-friendly websites using JSON content and Astro themes.",
+    "canonical_url": "https://staticwebsitegenerator.com/features",
+    "robots": "index,follow",
+    "og_title": "Features | Static Website Generator",
+    "og_description": "Build lightning-fast static websites using JSON content, reusable Astro themes and a modern publishing workflow.",
+    "og_image": "/images/og/features.png",
+    "template_name": "page",
+    "template_label": "Features",
+    "category_id": null,
+    "excerpt": "Everything you need to build, manage and deploy modern static websites.",
+    "content": "# Features\n\nStatic Website Generator (SWG) is designed for developers, agencies and content teams that want the speed of static websites without sacrificing a modern editing experience.\n\n## JSON as the Single Source of Truth\n\nEvery page, blog post, documentation article and menu is stored as JSON. This makes your content portable, versionable and easy to automate.\n\n## Astro Theme Support\n\nThemes are standard Astro projects. Import existing themes, customize them locally and reuse them across multiple websites.\n\n## Markdown Editor\n\nWrite content in Markdown while SWG manages metadata, publishing and exports automatically.\n\n## One Click Build\n\nExport your content, build your Astro project and publish a complete static website with a predictable workflow.\n\n## SEO Ready\n\nGenerate clean HTML, structured metadata and search engine friendly pages with excellent Core Web Vitals.\n\n## Built for Developers\n\nSWG follows a simple architecture where the CMS writes JSON and Astro renders the website. No runtime CMS, no unnecessary complexity.\n\n```text\nCMS\n    ↓\nJSON\n    ↓\nAstro\n    ↓\nStatic HTML\n```\n\nStart building modern static websites today with SWG.",
+    "feature_image": "/images/features-hero.png",
+    "tags": [
+        "features",
+        "astro",
+        "json",
+        "static websites",
+        "cms"
+    ],
+    "reading_time": 3
+}

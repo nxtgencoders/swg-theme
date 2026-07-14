@@ -1,26 +1,81 @@
 ---
 import BaseLayout
     from '../layouts/BaseLayout.astro';
+
+import { marked }
+    from 'marked';
+
+const {
+    page
+} = Astro.props;
+
+const html =
+    marked.parse(
+        page.content || ''
+    );
 ---
 
-<BaseLayout
-    title="Page"
->
+<BaseLayout page={page}>
 
-    <main>
+    <section
+        class="border-b border-slate-200 bg-white py-16"
+    >
 
-        <article>
+        <div
+            class="mx-auto max-w-4xl px-6 lg:px-8"
+        >
 
-            <h1>
-                Page
-            </h1>
+            <p
+                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+            >
 
-            <p>
-                This is a standard SWG page template.
+                {page.template_label}
+
             </p>
 
-        </article>
+            <h1
+                class="mt-4 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
 
-    </main>
+                {page.title}
+
+            </h1>
+
+            {
+
+                page.excerpt && (
+
+                    <p
+                        class="mt-6 text-xl leading-8 text-slate-600"
+                    >
+
+                        {page.excerpt}
+
+                    </p>
+
+                )
+
+            }
+
+        </div>
+
+    </section>
+
+    <section
+        class="py-20"
+    >
+
+        <div
+            class="mx-auto max-w-4xl px-6 lg:px-8"
+        >
+
+            <article
+                class="prose prose-lg prose-slate max-w-none"
+                set:html={html}
+            />
+
+        </div>
+
+    </section>
 
 </BaseLayout>

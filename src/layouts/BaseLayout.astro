@@ -1,19 +1,17 @@
 ---
-import '../styles/base.css';
-
 import SEO
     from '../components/seo/SEO.astro';
 
-export interface Props {
-
-    title?: string;
-
+import {
+    getSettings
 }
+from '../lib/settings';
+
+const settings =
+    getSettings();
 
 const {
-
-    title = 'Static Website Generator'
-
+    page
 } = Astro.props;
 ---
 

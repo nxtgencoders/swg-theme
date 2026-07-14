@@ -164,6 +164,37 @@
                         ]
 
                     }
+                },
+                {
+                    "type": "code-example",
+                    "data": {
+
+                        "eyebrow": "How it works",
+
+                        "title": "JSON becomes beautiful websites.",
+
+                        "subtitle": "Static Website Generator exports structured JSON files. Astro templates render that content into fast, secure and SEO-friendly websites.",
+
+                        "steps": [
+
+                            {
+                                "title": "Create your content",
+                                "description": "Manage pages, blog posts and documentation inside Static Website Generator."
+                            },
+                            {
+                                "title": "Export JSON",
+                                "description": "SWG writes your complete website to the export/ directory."
+                            },
+                            {
+                                "title": "Build with Astro",
+                                "description": "Astro renders the JSON into a production-ready static website."
+                            }
+
+                        ],
+
+                        "code": "{\n  \"title\": \"Homepage\",\n  \"slug\": \"homepage\",\n  \"template\": \"homepage\",\n  \"sections\": [\n    {\n      \"type\": \"hero\"\n    },\n    {\n      \"type\": \"features-grid\"\n    },\n    {\n      \"type\": \"benefits-grid\"\n    },\n    {\n      \"type\": \"faq\"\n    }\n  ]\n}"
+
+                    }
                 }
         ]
 }

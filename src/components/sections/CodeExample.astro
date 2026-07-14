@@ -2,25 +2,9 @@
 import CodeBlock
     from '../marketing/CodeBlock.astro';
 
-const code = `{
-  "title": "Homepage",
-  "slug": "homepage",
-  "template": "homepage",
-  "sections": [
-    {
-      "type": "hero"
-    },
-    {
-      "type": "features-grid"
-    },
-    {
-      "type": "benefits-grid"
-    },
-    {
-      "type": "faq"
-    }
-  ]
-}`;
+const {
+    data
+} = Astro.props;
 ---
 
 <section
@@ -33,153 +17,120 @@ const code = `{
 
         <div>
 
-            <span
-                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
-            >
-
-                How it works
-
-            </span>
-
-            <h2
-                class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900"
-            >
-
-                JSON becomes
-                beautiful websites.
-
-            </h2>
-
-            <p
-                class="mt-6 text-lg leading-8 text-slate-600"
-            >
-
-                Static Website Generator exports structured JSON files.
-                Astro templates render that content into fast, secure and
-                SEO-friendly websites.
-
-            </p>
-
-            <ul
-                class="mt-10 space-y-5"
-            >
-
-                <li
-                    class="flex gap-4"
-                >
+            {
+                data.eyebrow && (
 
                     <span
-                        class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 font-bold text-[#1C64A5]"
+                        class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
                     >
 
-                        1
+                        {data.eyebrow}
 
                     </span>
 
-                    <div>
+                )
+            }
 
-                        <h3
-                            class="font-semibold text-slate-900"
-                        >
+            {
+                data.title && (
 
-                            Create your content
-
-                        </h3>
-
-                        <p
-                            class="mt-1 text-slate-600"
-                        >
-
-                            Manage pages, blog posts and documentation
-                            inside Static Website Generator.
-
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li
-                    class="flex gap-4"
-                >
-
-                    <span
-                        class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 font-bold text-[#1C64A5]"
+                    <h2
+                        class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900"
                     >
 
-                        2
+                        {data.title}
 
-                    </span>
+                    </h2>
 
-                    <div>
+                )
+            }
 
-                        <h3
-                            class="font-semibold text-slate-900"
-                        >
+            {
+                data.subtitle && (
 
-                            Export JSON
-
-                        </h3>
-
-                        <p
-                            class="mt-1 text-slate-600"
-                        >
-
-                            SWG writes your complete website to the
-                            <code>export/</code> directory.
-
-                        </p>
-
-                    </div>
-
-                </li>
-
-                <li
-                    class="flex gap-4"
-                >
-
-                    <span
-                        class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 font-bold text-[#1C64A5]"
+                    <p
+                        class="mt-6 text-lg leading-8 text-slate-600"
                     >
 
-                        3
+                        {data.subtitle}
 
-                    </span>
+                    </p>
 
-                    <div>
+                )
+            }
 
-                        <h3
-                            class="font-semibold text-slate-900"
-                        >
+            {
+                data.steps?.length > 0 && (
 
-                            Build with Astro
+                    <ul
+                        class="mt-10 space-y-5"
+                    >
 
-                        </h3>
+                        {
+                            data.steps.map(
+                                (
+                                    step,
+                                    index
+                                ) => (
 
-                        <p
-                            class="mt-1 text-slate-600"
-                        >
+                                    <li
+                                        class="flex gap-4"
+                                    >
 
-                            Astro renders the JSON into a production-ready
-                            static website.
+                                        <span
+                                            class="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 font-bold text-[#1C64A5]"
+                                        >
 
-                        </p>
+                                            {index + 1}
 
-                    </div>
+                                        </span>
 
-                </li>
+                                        <div>
 
-            </ul>
+                                            <h3
+                                                class="font-semibold text-slate-900"
+                                            >
+
+                                                {step.title}
+
+                                            </h3>
+
+                                            <p
+                                                class="mt-1 text-slate-600"
+                                            >
+
+                                                {step.description}
+
+                                            </p>
+
+                                        </div>
+
+                                    </li>
+
+                                )
+                            )
+                        }
+
+                    </ul>
+
+                )
+            }
 
         </div>
 
-        <div>
-    
-            <CodeBlock
-                code={code}
-            />
+        {
+            data.code && (
 
-        </div>
+                <div>
+
+                    <CodeBlock
+                        code={data.code}
+                    />
+
+                </div>
+
+            )
+        }
 
     </div>
 

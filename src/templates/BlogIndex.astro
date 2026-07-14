@@ -12,9 +12,8 @@ import CTA
     from '../components/sections/CTA.astro';
 
 import {
-    getCategory,
-    getArticle,
-    getArticles
+    getArticles,
+    getArticleUrl
 }
 from '../lib/blog';
 
@@ -36,11 +35,6 @@ const articles =
                     a.published_at
                 ).getTime()
         );
-
-const category =
-    getCategory(
-        article.category_id
-    );
 
 const page = {
 
@@ -122,106 +116,104 @@ const page = {
             class="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8"
         >
 
-            {
-                articles.map(
-                    article => (
+        {
+    articles.map(
+        article => (
 
-                        <article
-                            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                        >
+            <article
+                class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+            >
+
+                {
+                    article.featured_image && (
+
+                        <img
+                            src={`/media/${article.featured_image}`}
+                            alt={article.title}
+                            class="aspect-[16/9] w-full object-cover"
+                        />
+
+                    )
+                }
+
+                <div
+                    class="p-8"
+                >
+
+                    <div
+                        class="flex items-center justify-between text-sm text-slate-500"
+                    >
+
+                        <span>
 
                             {
-                                article.featured_image && (
-
-                                    <img
-                                        src={`/media/${article.featured_image}`}
-                                        alt={article.title}
-                                        class="aspect-[16/9] w-full object-cover"
-                                    />
-
+                                new Date(
+                                    article.published_at
+                                ).toLocaleDateString(
+                                    'en-US',
+                                    {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    }
                                 )
                             }
 
-                            <div
-                                class="p-8"
+                        </span>
+
+                        <span>
+
+                            {article.reading_time} min read
+
+                        </span>
+
+                    </div>
+
+                    <h2
+                        class="mt-4 text-2xl font-bold text-slate-900"
+                    >
+
+                        <a
+                            href={getArticleUrl(article)}
+                            class="transition hover:text-[#1C64A5]"
+                        >
+
+                            {article.title}
+
+                        </a>
+
+                    </h2>
+
+                    {
+                        article.excerpt && (
+
+                            <p
+                                class="mt-4 leading-7 text-slate-600"
                             >
 
-                                <div
-                                    class="flex items-center justify-between text-sm text-slate-500"
-                                >
+                                {article.excerpt}
 
-                                    <span>
+                            </p>
 
-                                        {
-                                            new Date(
-                                                article.published_at
-                                            ).toLocaleDateString(
-                                                'en-US',
-                                                {
-                                                    year: 'numeric',
-                                                    month: 'long',
-                                                    day: 'numeric'
-                                                }
-                                            )
-                                        }
+                        )
+                    }
 
-                                    </span>
+                    <a
+                        href={getArticleUrl(article)}
+                        class="mt-8 inline-flex items-center font-semibold text-[#1C64A5] transition hover:gap-3"
+                    >
 
-                                    <span>
+                        Read article →
 
-                                        {article.reading_time}
-                                        {' '}
-                                        min read
+                    </a>
 
-                                    </span>
+                </div>
 
-                                </div>
+            </article>
 
-                                <h2
-                                    class="mt-4 text-2xl font-bold text-slate-900"
-                                >
-
-                                    <a
-                                        href={`/blog/${category.slug}/${article.slug}`}
-                                        class="transition hover:text-[#1C64A5]"
-                                    >
-
-                                        {article.title}
-
-                                    </a>
-
-                                </h2>
-
-                                {
-                                    article.excerpt && (
-
-                                        <p
-                                            class="mt-4 leading-7 text-slate-600"
-                                        >
-
-                                            {article.excerpt}
-
-                                        </p>
-
-                                    )
-                                }
-
-                                <a
-                                    href={`/blog/${category.slug}/${article.slug}`}
-                                    class="mt-8 inline-flex items-center font-semibold text-[#1C64A5] transition hover:gap-3"
-                                >
-
-                                    Read article →
-
-                                </a>
-
-                            </div>
-
-                        </article>
-
-                    )
-                )
-            }
+        )
+    )
+}
 
         </div>
 

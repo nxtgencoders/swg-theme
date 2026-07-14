@@ -153,6 +153,47 @@ export function getCategories(): BlogCategory[] {
 
 }
 
+
+/**
+ * Returns the category of a blog article.
+ */
+export function getArticleCategory(
+    article: BlogArticle
+): BlogCategory | undefined {
+
+    return getCategory(
+        article.category_id
+    );
+
+}
+
+/**
+ * Returns the URL of a blog article.
+ */
+export function getArticleUrl(
+    article: BlogArticle
+): string {
+
+    const category =
+        getArticleCategory(
+            article
+        );
+
+    return `/blog/${category?.slug}/${article.slug}`;
+
+}
+
+/**
+ * Returns the URL of a blog category.
+ */
+export function getCategoryUrl(
+    category: BlogCategory
+): string {
+
+    return `/blog/${category.slug}`;
+
+}
+
 /**
  * Returns a category by id.
  */

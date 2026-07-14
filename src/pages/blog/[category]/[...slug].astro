@@ -1,4 +1,5 @@
 ---
+
 import BlogArticleTemplate
     from '../../../templates/BlogArticle.astro';
 
@@ -19,16 +20,28 @@ export async function getStaticPaths() {
         )
 
         .map(
-            article => ({
+            article => {
 
-                params: {
+                const category =
+                    getCategory(
+                        article.category_id
+                    );
 
-                    slug:
-                        article.slug
+                return {
 
-                }
+                    params: {
 
-            })
+                        category:
+                            category!.slug,
+
+                        slug:
+                            article.slug
+
+                    }
+
+                };
+
+            }
         );
 
 }

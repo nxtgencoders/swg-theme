@@ -1,3 +1,9 @@
+---
+const {
+    data
+} = Astro.props;
+---
+
 <section
     class="border-y border-slate-200 bg-slate-50 py-12"
 >
@@ -6,103 +12,71 @@
         class="mx-auto max-w-7xl px-6 lg:px-8"
     >
 
-        <p
-            class="text-center text-sm font-semibold uppercase tracking-widest text-slate-500"
-        >
+        {
+            data.title && (
 
-            Built with modern open-source technologies
-
-        </p>
-
-        <div
-            class="mt-10 grid grid-cols-2 gap-8 text-center sm:grid-cols-3 lg:grid-cols-6"
-        >
-
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
-
-                <span
-                    class="text-lg font-bold text-slate-800"
+                <p
+                    class="text-center text-sm font-semibold uppercase tracking-widest text-slate-500"
                 >
 
-                    Astro
+                    {data.title}
 
-                </span>
+                </p>
 
-            </div>
+            )
+        }
 
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
+        {
+            data.items?.length > 0 && (
 
-                <span
-                    class="text-lg font-bold text-slate-800"
+                <div
+                    class="mt-10 grid grid-cols-2 gap-8 text-center sm:grid-cols-3 lg:grid-cols-6"
                 >
 
-                    Tailwind CSS
+                    {
+                        data.items.map(
+                            item => (
 
-                </span>
+                                <div
+                                    class="rounded-xl border border-slate-200 bg-white px-6 py-5"
+                                >
 
-            </div>
+                                    {
+                                        item.logo && (
 
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
+                                            <img
+                                                src={item.logo}
+                                                alt={item.name}
+                                                class="mx-auto h-8 w-auto"
+                                            />
 
-                <span
-                    class="text-lg font-bold text-slate-800"
-                >
+                                        )
+                                    }
 
-                    Alpine.js
+                                    {
+                                        item.name && (
 
-                </span>
+                                            <span
+                                                class="text-lg font-bold text-slate-800"
+                                            >
 
-            </div>
+                                                {item.name}
 
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
+                                            </span>
 
-                <span
-                    class="text-lg font-bold text-slate-800"
-                >
+                                        )
+                                    }
 
-                    Slim 4
+                                </div>
 
-                </span>
+                            )
+                        )
+                    }
 
-            </div>
+                </div>
 
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
-
-                <span
-                    class="text-lg font-bold text-slate-800"
-                >
-
-                    Twig
-
-                </span>
-
-            </div>
-
-            <div
-                class="rounded-xl border border-slate-200 bg-white px-6 py-5"
-            >
-
-                <span
-                    class="text-lg font-bold text-slate-800"
-                >
-
-                    PHP 8.3+
-
-                </span>
-
-            </div>
-
-        </div>
+            )
+        }
 
     </div>
 

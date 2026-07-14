@@ -54,8 +54,40 @@
                     "note":
                         "Free • Open Source • Built with Astro",
 
-                    "code":
-                            "{\n  \"title\": \"Homepage\"\n}"
+                     "code": 
+                        "{\n  \"title\": \"Homepage\",\n  \"slug\": \"homepage\",\n  \"template\": \"homepage\",\n  \"editor\": \"sections\",\n  \"sections\": [\n    {\n      \"type\": \"hero\",\n      \"data\": {\n        \"eyebrow\": \"Static Website Generator\",\n        \"title\": \"Build blazing fast static websites\",\n        \"highlight\": \"with Astro\",\n        \"subtitle\": \"Structured content. Reusable themes.\",\n        \"buttons\": [\n          {\n            \"label\": \"Get Started\",\n            \"url\": \"/docs\",\n            \"variant\": \"primary\"\n          }\n        ]\n      }\n    }\n  ]\n}"
+
+                    }
+                },
+                {
+                    "type": "logo-cloud",
+                    "data": {
+
+                        "title":
+                            "Built with modern open-source technologies",
+
+                        "items": [
+
+                            {
+                                "name": "Astro"
+                            },
+                            {
+                                "name": "Tailwind CSS"
+                            },
+                            {
+                                "name": "Alpine.js"
+                            },
+                            {
+                                "name": "Slim 4"
+                            },
+                            {
+                                "name": "Twig"
+                            },
+                            {
+                                "name": "PHP 8.3+"
+                            }
+
+                        ]
 
                     }
                 }

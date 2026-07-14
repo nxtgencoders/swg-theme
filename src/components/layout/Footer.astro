@@ -116,8 +116,13 @@ const settings =
                     class="flex items-center gap-6"
                 >
 
-                    {
-                        links?.items.map(
+                {
+                    menu?.categories
+                        .find(
+                            category =>
+                                category.title === 'Technology'
+                        )
+                        ?.items.map(
                             item => (
 
                                 <a
@@ -137,7 +142,7 @@ const settings =
 
                             )
                         )
-                    }
+                }
 
                 </div>
 

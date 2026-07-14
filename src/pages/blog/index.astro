@@ -1,0 +1,46 @@
+---
+import BlogIndexTemplate
+    from '../../templates/blog/Index.astro';
+
+import {
+    getArticles,
+    getCategories
+}
+from '../../lib/blog';
+
+const category = {
+
+    title: 'Blog',
+
+    slug: 'blog'
+
+};
+
+const posts =
+    getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .sort(
+            (a, b) =>
+                new Date(
+                    b.published_at
+                ).getTime()
+                -
+                new Date(
+                    a.published_at
+                ).getTime()
+        );
+
+const categories =
+    getCategories();
+---
+
+<BlogIndexTemplate
+    category={category}
+    categories={categories}
+    posts={posts}
+/>

@@ -32,16 +32,17 @@ const category =
 
         .find(
             category =>
-                category.slug === Astro.params.slug
+                category.slug === Astro.params.category
         );
 
 if (!category) {
 
     throw new Error(
-        `Docs category '${Astro.params.slug}' not found.`
+        `Docs category '${Astro.params.category}' not found.`
     );
 
 }
+
 
 const articles =
     getArticles()

@@ -73,15 +73,16 @@ const articlesDirectory =
     path.join(
         process.cwd(),
         'export',
-        'blog'
+        'blog',
+        'articles'
     );
 
 const categoriesFile =
     path.join(
         process.cwd(),
         'export',
-        'categories',
-        'blog.json'
+        'blog',
+        'categories.json'
     );
 
 /**

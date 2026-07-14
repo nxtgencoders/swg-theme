@@ -1,0 +1,26 @@
+{
+    "id": 3,
+    "category_id": 10,
+    "title": "Welcome to SWG",
+    "slug": "welcome-to-swg",
+    "excerpt": "Welcome to Static Website Generator. Learn what SWG is, why it was built and how it helps you create modern static websites.",
+    "content": "# Welcome to SWG\n\nWelcome to Static Website Generator (SWG).\n\nSWG is a modern content management system designed specifically for static websites. It combines the simplicity of JSON-based content management with the flexibility of Astro themes.\n\n## Why SWG?\n\nTraditional CMS platforms often require databases, plugins and ongoing maintenance. SWG takes a different approach by making JSON the single source of truth while Astro handles the presentation layer.\n\n## What You Can Build\n\nWith SWG you can create:\n\n- Business websites\n- Documentation portals\n- Blogs\n- Landing pages\n- Marketing websites\n\n## Designed for Developers\n\nThemes are standard Astro projects. Build and test them locally, then package and import them directly into SWG without changing your code.\n\n## Designed for Content Editors\n\nContent editors can manage pages, blog posts, documentation and media through the administration interface while developers remain in control of the design and theme.\n\n## Start Building\n\nBrowse the documentation, explore the example content and create your first Astro theme. Welcome to the SWG community!",
+    "featured_image": "",
+    "meta_title": "Welcome to SWG",
+    "meta_description": "Welcome to Static Website Generator and discover a modern JSON-first CMS for Astro.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "welcome",
+        "swg",
+        "astro",
+        "getting-started"
+    ],
+    "status": "published",
+    "published_at": "2026-07-10 10:00:00",
+    "sort_order": 3,
+    "created_at": "2026-07-10 10:00:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 3
+}

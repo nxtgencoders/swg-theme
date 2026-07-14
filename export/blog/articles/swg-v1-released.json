@@ -1,0 +1,26 @@
+{
+    "id": 2,
+    "category_id": 10,
+    "title": "SWG v1 Released",
+    "slug": "swg-v1-released",
+    "excerpt": "Static Website Generator v1 is now available with Astro theme support, JSON-first content management and a modern publishing workflow.",
+    "content": "# SWG v1 Released\n\nWe're excited to announce the first public release of Static Website Generator.\n\n## What's New\n\nSWG v1 introduces a JSON-first architecture for building static websites with Astro.\n\n### Highlights\n\n- JSON as the single source of truth\n- Native Astro theme support\n- Markdown page editor\n- Blog and documentation support\n- Theme import and packaging\n- Modern Tailwind-based administration\n\n## Built for Developers\n\nThemes are standard Astro projects that can be developed locally using your favorite editor. Once completed, they can be packaged and imported directly into Static Website Generator.\n\n## Fast and Secure\n\nBecause SWG generates static websites, your projects benefit from excellent performance, improved security and straightforward deployments.\n\n## What's Next\n\nFuture releases will introduce additional themes, AI-assisted tooling and an expanding ecosystem for developers.\n\nThank you for following the development of Static Website Generator.",
+    "featured_image": "",
+    "meta_title": "SWG v1 Released",
+    "meta_description": "Announcing the first public release of Static Website Generator with Astro themes and JSON-first content management.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "release",
+        "swg",
+        "astro",
+        "announcement"
+    ],
+    "status": "published",
+    "published_at": "2026-07-12 09:00:00",
+    "sort_order": 2,
+    "created_at": "2026-07-12 09:00:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 4
+}

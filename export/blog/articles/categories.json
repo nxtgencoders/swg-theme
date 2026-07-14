@@ -1,0 +1,41 @@
+[
+    {
+        "id": 10,
+        "type": "blog",
+        "site_id": 1,
+        "name": "Getting Started",
+        "slug": "getting-started",
+        "icon": "rocket",
+        "sort_order": 1,
+        "created_at": "2026-07-14 12:00:00",
+        "description": "Learn the basics of Static Website Generator and get up and running quickly.",
+        "color": "blue",
+        "sections": []
+    },
+    {
+        "id": 11,
+        "type": "blog",
+        "site_id": 1,
+        "name": "Themes",
+        "slug": "themes",
+        "icon": "blocks",
+        "sort_order": 2,
+        "created_at": "2026-07-14 12:00:00",
+        "description": "Articles about building, customizing and packaging Astro themes for SWG.",
+        "color": "green",
+        "sections": []
+    },
+    {
+        "id": 12,
+        "type": "blog",
+        "site_id": 1,
+        "name": "News",
+        "slug": "news",
+        "icon": "newspaper",
+        "sort_order": 3,
+        "created_at": "2026-07-14 12:00:00",
+        "description": "Product announcements, release notes and updates from the Static Website Generator project.",
+        "color": "violet",
+        "sections": []
+    }
+]

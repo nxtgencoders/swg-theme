@@ -1,0 +1,78 @@
+---
+import DocsCategoryTemplate
+    from '../../../templates/DocsCategory.astro';
+
+import {
+    getArticles,
+    getCategories
+}
+from '../../../lib/docs';
+
+export async function getStaticPaths() {
+
+    return getCategories()
+
+        .map(
+            category => ({
+
+                params: {
+
+                    category:
+                        category.slug
+
+                }
+
+            })
+        );
+
+}
+
+const category =
+    getCategories()
+
+        .find(
+            category =>
+                category.slug === Astro.params.slug
+        );
+
+if (!category) {
+
+    throw new Error(
+        `Docs category '${Astro.params.slug}' not found.`
+    );
+
+}
+
+const posts =
+    getArticles()
+
+        .filter(
+            article =>
+
+                article.status === 'published'
+
+                &&
+
+                article.category_id === category.id
+        )
+
+        .sort(
+            (a, b) =>
+
+                new Date(
+                    b.published_at
+                ).getTime()
+
+                -
+
+                new Date(
+                    a.published_at
+                ).getTime()
+        );
+
+---
+
+<DocsCategoryTemplate
+    category={category}
+    posts={posts}
+/>

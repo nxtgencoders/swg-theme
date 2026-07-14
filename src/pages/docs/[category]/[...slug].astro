@@ -1,0 +1,71 @@
+---
+
+import DocsArticleTemplate
+    from '../../../templates/DocsArticle.astro';
+
+import {
+    getArticles,
+    getArticle,
+    getCategory
+}
+from '../../../lib/docs';
+
+export async function getStaticPaths() {
+
+    return getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .map(
+            article => {
+
+                const category =
+                    getCategory(
+                        article.category_id
+                    );
+
+                return {
+
+                    params: {
+
+                        category:
+                            category!.slug,
+
+                        slug:
+                            article.slug
+
+                    }
+
+                };
+
+            }
+        );
+
+}
+
+const article =
+    getArticle(
+        Astro.params.slug!
+    );
+
+if (!article) {
+
+    throw new Error(
+        `Docs article '${Astro.params.slug}' not found.`
+    );
+
+}
+
+const category =
+    getCategory(
+        article.category_id
+    );
+---
+
+<DocsArticleTemplate
+    article={article}
+    category={category}
+/>

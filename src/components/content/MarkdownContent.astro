@@ -1,0 +1,30 @@
+---
+import { marked }
+    from 'marked';
+
+const {
+    page
+} = Astro.props;
+
+const html =
+    marked.parse(
+        page.content || ''
+    );
+---
+
+<section
+    class="py-20"
+>
+
+    <div
+        class="mx-auto max-w-4xl px-6 lg:px-8"
+    >
+
+        <article
+            class="prose prose-lg prose-slate max-w-none"
+            set:html={html}
+        />
+
+    </div>
+
+</section>

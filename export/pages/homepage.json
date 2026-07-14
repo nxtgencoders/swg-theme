@@ -1,7 +1,0 @@
-{
-    "title": "Home",
-    "slug": "",
-    "template": "homepage",
-    "is_homepage": true,
-    "content": "# Welcome\n\nWelcome to your new Static Website Generator theme."
-}

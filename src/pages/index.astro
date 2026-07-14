@@ -1,6 +1,16 @@
 ---
-import Homepage
+import HomepageTemplate
     from '../templates/Homepage.astro';
+
+import {
+    getHomepage
+}
+from '../lib/pages';
+
+const page =
+    getHomepage();
 ---
 
-<Homepage />
+<HomepageTemplate
+    page={page}
+/>

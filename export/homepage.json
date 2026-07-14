@@ -1,0 +1,63 @@
+{
+    "id": 1,
+    "title": "Homepage",
+    "slug": "homepage",
+    "status": "published",
+    "published_at": "2026-07-14 09:00:00",
+    "created_at": "2026-07-14 09:00:00",
+    "updated_at": "2026-07-14 09:00:00",
+    "is_homepage": 1,
+    "template": "homepage",
+    "meta_title": "Features | Static Website Generator",
+    "meta_description": "Discover the powerful features of Static Website Generator. Build fast, secure and SEO-friendly websites using JSON content and Astro themes.",
+    "canonical_url": "https://staticwebsitegenerator.com/features",
+    "robots": "index,follow",
+    "og_title": "Features | Static Website Generator",
+    "og_description": "Build lightning-fast static websites using JSON content, reusable Astro themes and a modern publishing workflow.",
+    "og_image": "/images/og/features.png",
+    "template_name": "page",
+    "template_label": "Features",
+    "category_id": null,
+    "editor": "sections",
+    "sections": [
+        {
+                "type": "hero",
+                "data": {
+
+                    "eyebrow":
+                        "Static Website Generator",
+
+                    "title":
+                        "Build blazing fast static websites",
+
+                    "highlight":
+                        "with Static Website Generator.",
+
+                    "subtitle":
+                        "Create blogs, documentation websites and business websites using structured JSON content.",
+
+                    "buttons": [
+
+                        {
+                            "text": "Get Started",
+                            "url": "/docs/getting-started",
+                            "style": "primary"
+                        },
+                        {
+                            "text": "Browse Themes",
+                            "url": "/themes",
+                            "style": "secondary"
+                        }
+
+                    ],
+
+                    "note":
+                        "Free • Open Source • Built with Astro",
+
+                    "code":
+                            "{\n  \"title\": \"Homepage\"\n}"
+
+                    }
+                }
+        ]
+}

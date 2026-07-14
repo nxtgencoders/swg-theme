@@ -2,10 +2,9 @@
 import CodeBlock
     from '../marketing/CodeBlock.astro';
 
-const code = `{
-  "title": "Homepage",
-  "template": "homepage"
-}`;
+const {
+    data
+} = Astro.props;
 ---
 
 <section
@@ -20,86 +19,122 @@ const code = `{
             class="max-w-2xl"
         >
 
-            <span
-                class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-medium text-[#1C64A5]"
-            >
+            {
+                data.eyebrow && (
 
-                Static Website Generator
+                    <span
+                        class="inline-flex rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-sm font-medium text-[#1C64A5]"
+                    >
 
-            </span>
+                        {data.eyebrow}
+
+                    </span>
+
+                )
+            }
 
             <h1
                 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
             >
 
-                Build blazing fast
-                <br />
+                {data.title}
 
-                static websites
+                {
+                    data.highlight && (
 
-                <span
-                    class="block mt-2 text-[#1C64A5]"
-                >
+                        <span
+                            class="mt-2 block text-[#1C64A5]"
+                        >
 
-                    with Static Website Generator.
+                            {data.highlight}
 
-                </span>
+                        </span>
+
+                    )
+                }
 
             </h1>
 
-            <p
-                class="mt-8 max-w-xl text-lg leading-8 text-slate-600"
-            >
+            {
+                data.subtitle && (
 
-                Create blogs, documentation websites and business
-                websites using structured JSON content, reusable Astro
-                themes and a modern publishing workflow.
+                    <p
+                        class="mt-8 max-w-xl text-lg leading-8 text-slate-600"
+                    >
 
-            </p>
+                        {data.subtitle}
 
-            <div
-                class="mt-10 flex flex-col gap-4 sm:flex-row"
-            >
+                    </p>
 
-                <a
-                    href="/docs/getting-started"
-                    class="inline-flex items-center justify-center rounded-xl bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:bg-[#17548a]"
-                >
+                )
+            }
 
-                    Get Started
+            {
+                data.buttons?.length > 0 && (
 
-                </a>
+                    <div
+                        class="mt-10 flex flex-col gap-4 sm:flex-row"
+                    >
 
-                <a
-                    href="/themes"
-                    class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-[#1C64A5] hover:text-[#1C64A5]"
-                >
+                        {
+                            data.buttons.map(
+                                button => (
 
-                    Browse Themes
+                                    <a
+                                        href={button.url}
+                                        class={
+                                            button.style === 'secondary'
 
-                </a>
+                                                ? 'inline-flex items-center justify-center rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:border-[#1C64A5] hover:text-[#1C64A5]'
 
-            </div>
+                                                : 'inline-flex items-center justify-center rounded-xl bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:bg-[#17548a]'
+                                        }
+                                    >
 
-            <p
-                class="mt-8 text-sm text-slate-500"
-            >
+                                        {button.text}
 
-                Free • Open Source • Built with Astro
+                                    </a>
 
-            </p>
+                                )
+                            )
+                        }
+
+                    </div>
+
+                )
+            }
+
+            {
+                data.note && (
+
+                    <p
+                        class="mt-8 text-sm text-slate-500"
+                    >
+
+                        {data.note}
+
+                    </p>
+
+                )
+            }
 
         </div>
 
-        <div
-            class="mx-auto w-full max-w-xl lg:max-w-none"
-        >
+        {
+            data.code && (
 
-            <CodeBlock
-                code={code}
-            />
+                <div
+                    class="mx-auto w-full max-w-xl lg:max-w-none"
+                >
 
-        </div>
+                    <CodeBlock
+                        code={data.code}
+                    />
+
+                </div>
+
+            )
+        }
 
     </div>
 

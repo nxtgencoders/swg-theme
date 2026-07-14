@@ -30,30 +30,35 @@
     ],
     "reading_time": 2,
     "sections": [
+                    {
+                        "type": "cta",
+                        "data": {
 
-                {
-                    "type": "cta",
-                    "data": {
-                        "eyebrow": "Ready to get started?",
-                        "title": "Build your next static website with SWG.",
-                        "subtitle": "Create fast, secure and SEO-friendly websites using Astro themes, structured JSON content and a modern publishing workflow.",
-                        "buttons": [
-                            {
-                                "label": "Get Started",
-                                "url": "/docs/getting-started",
-                                "variant": "primary"
-                            },
-                            {
-                                "label": "Browse Themes",
-                                "url": "/themes",
-                                "variant": "secondary"
-                            }
+                            "eyebrow": "Ready to launch?",
 
-                        ],
-                        "note": "Open Source • Astro Powered • JSON First"
+                            "title": "Choose your plan and start building today.",
 
+                            "subtitle": "Start with a free trial or explore the documentation to see how Static Website Generator fits your workflow.",
+
+                            "buttons": [
+
+                                {
+                                    "label": "Start Free Trial",
+                                    "url": "/register",
+                                    "variant": "primary"
+                                },
+                                {
+                                    "label": "View Documentation",
+                                    "url": "/docs",
+                                    "variant": "secondary"
+                                }
+
+                            ],
+
+                            "note": "No credit card required • Cancel anytime • Open Source"
+
+                        }
                     }
-                }
 
         ]
 }

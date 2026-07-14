@@ -28,5 +28,32 @@
         "legal",
         "gdpr"
     ],
-    "reading_time": 2
+    "reading_time": 2,
+    "sections": [
+
+                {
+                    "type": "cta",
+                    "data": {
+                        "eyebrow": "Ready to get started?",
+                        "title": "Build your next static website with SWG.",
+                        "subtitle": "Create fast, secure and SEO-friendly websites using Astro themes, structured JSON content and a modern publishing workflow.",
+                        "buttons": [
+                            {
+                                "label": "Get Started",
+                                "url": "/docs/getting-started",
+                                "variant": "primary"
+                            },
+                            {
+                                "label": "Browse Themes",
+                                "url": "/themes",
+                                "variant": "secondary"
+                            }
+
+                        ],
+                        "note": "Open Source • Astro Powered • JSON First"
+
+                    }
+                }
+
+        ]
 }

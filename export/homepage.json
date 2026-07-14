@@ -195,6 +195,72 @@
                         "code": "{\n  \"title\": \"Homepage\",\n  \"slug\": \"homepage\",\n  \"template\": \"homepage\",\n  \"sections\": [\n    {\n      \"type\": \"hero\"\n    },\n    {\n      \"type\": \"features-grid\"\n    },\n    {\n      \"type\": \"benefits-grid\"\n    },\n    {\n      \"type\": \"faq\"\n    }\n  ]\n}"
 
                     }
+                },
+                {
+                    "type": "faq",
+                    "data": {
+
+                        "eyebrow": "Frequently Asked Questions",
+
+                        "title": "Questions? We've got answers.",
+
+                        "subtitle": "Learn more about Static Website Generator, Astro themes and the JSON-first workflow.",
+
+                        "items": [
+
+                            {
+                                "question": "What is Static Website Generator?",
+                                "answer": "Static Website Generator is a content management system that exports structured JSON. Astro themes render that JSON into fast and secure static websites."
+                            },
+                            {
+                                "question": "Do I need to know Astro?",
+                                "answer": "No. Content editors work entirely inside SWG. Developers can create or customize Astro themes using familiar Astro components."
+                            },
+                            {
+                                "question": "How is content stored?",
+                                "answer": "Content is exported as structured JSON files inside the export/ directory. This directory becomes the single source of truth for the Astro theme."
+                            },
+                            {
+                                "question": "Can I create my own themes?",
+                                "answer": "Yes. SWG includes a starter theme and a CLI to help you build, validate and package reusable Astro themes."
+                            },
+                            {
+                                "question": "Is SWG suitable for production websites?",
+                                "answer": "Absolutely. Generated websites are static, lightweight, secure and optimized for performance, SEO and modern hosting platforms."
+                            }
+
+                        ]
+
+                    }
+                },
+                {
+                    "type": "cta",
+                    "data": {
+
+                        "eyebrow": "Ready to get started?",
+
+                        "title": "Build your next static website with SWG.",
+
+                        "subtitle": "Create fast, secure and SEO-friendly websites using Astro themes, structured JSON content and a modern publishing workflow.",
+
+                        "buttons": [
+
+                            {
+                                "label": "Get Started",
+                                "url": "/docs/getting-started",
+                                "variant": "primary"
+                            },
+                            {
+                                "label": "Browse Themes",
+                                "url": "/themes",
+                                "variant": "secondary"
+                            }
+
+                        ],
+
+                        "note": "Open Source • Astro Powered • JSON First"
+
+                    }
                 }
         ]
 }

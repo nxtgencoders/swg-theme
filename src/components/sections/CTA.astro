@@ -1,3 +1,9 @@
+---
+const {
+    data
+} = Astro.props;
+---
+
 <section
     class="py-24"
 >
@@ -10,64 +16,96 @@
             class="overflow-hidden rounded-3xl bg-[#1C64A5] px-8 py-20 text-center shadow-2xl lg:px-20"
         >
 
-            <span
-                class="text-sm font-semibold uppercase tracking-widest text-blue-100"
-            >
+            {
+                data.eyebrow && (
 
-                Ready to get started?
+                    <span
+                        class="text-sm font-semibold uppercase tracking-widest text-blue-100"
+                    >
 
-            </span>
+                        {data.eyebrow}
 
-            <h2
-                class="mt-6 text-4xl font-extrabold tracking-tight text-white lg:text-5xl"
-            >
+                    </span>
 
-                Build your next static website
-                with SWG.
+                )
+            }
 
-            </h2>
+            {
+                data.title && (
 
-            <p
-                class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-100"
-            >
+                    <h2
+                        class="mt-6 text-4xl font-extrabold tracking-tight text-white lg:text-5xl"
+                    >
 
-                Create fast, secure and SEO-friendly websites using
-                Astro themes, structured JSON content and a modern
-                publishing workflow.
+                        {data.title}
 
-            </p>
+                    </h2>
 
-            <div
-                class="mt-10 flex flex-wrap justify-center gap-4"
-            >
+                )
+            }
 
-                <a
-                    href="/docs/getting-started"
-                    class="rounded-xl bg-white px-6 py-3 font-semibold text-[#1C64A5] transition hover:bg-slate-100"
-                >
+            {
+                data.subtitle && (
 
-                    Get Started
+                    <p
+                        class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-blue-100"
+                    >
 
-                </a>
+                        {data.subtitle}
 
-                <a
-                    href="/themes"
-                    class="rounded-xl border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-                >
+                    </p>
 
-                    Browse Themes
+                )
+            }
 
-                </a>
+            {
+                data.buttons?.length > 0 && (
 
-            </div>
+                    <div
+                        class="mt-10 flex flex-wrap justify-center gap-4"
+                    >
 
-            <p
-                class="mt-8 text-sm text-blue-200"
-            >
+                        {
+                            data.buttons.map(
+                                button => (
 
-                Open Source • Astro Powered • JSON First
+                                    <a
+                                        href={button.url}
+                                        class={
+                                            button.variant === 'secondary'
 
-            </p>
+                                                ? 'rounded-xl border border-white/30 px-6 py-3 font-semibold text-white transition hover:bg-white/10'
+
+                                                : 'rounded-xl bg-white px-6 py-3 font-semibold text-[#1C64A5] transition hover:bg-slate-100'
+                                        }
+                                    >
+
+                                        {button.label}
+
+                                    </a>
+
+                                )
+                            )
+                        }
+
+                    </div>
+
+                )
+            }
+
+            {
+                data.note && (
+
+                    <p
+                        class="mt-8 text-sm text-blue-200"
+                    >
+
+                        {data.note}
+
+                    </p>
+
+                )
+            }
 
         </div>
 

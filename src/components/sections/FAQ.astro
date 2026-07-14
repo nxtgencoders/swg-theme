@@ -1,3 +1,9 @@
+---
+const {
+    data
+} = Astro.props;
+---
+
 <section
     class="bg-slate-50 py-24"
 >
@@ -10,161 +16,91 @@
             class="text-center"
         >
 
-            <span
-                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
-            >
+            {
+                data.eyebrow && (
 
-                Frequently Asked Questions
+                    <span
+                        class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+                    >
 
-            </span>
+                        {data.eyebrow}
 
-            <h2
-                class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900"
-            >
+                    </span>
 
-                Questions?
-                We've got answers.
+                )
+            }
 
-            </h2>
+            {
+                data.title && (
 
-            <p
-                class="mt-6 text-lg leading-8 text-slate-600"
-            >
+                    <h2
+                        class="mt-4 text-4xl font-extrabold tracking-tight text-slate-900"
+                    >
 
-                Learn more about Static Website Generator,
-                Astro themes and the JSON-first workflow.
+                        {data.title}
 
-            </p>
+                    </h2>
 
-        </div>
+                )
+            }
 
-        <div
-            class="mt-16 space-y-4"
-        >
+            {
+                data.subtitle && (
 
-            <details
-                class="rounded-2xl border border-slate-200 bg-white p-6"
-            >
+                    <p
+                        class="mt-6 text-lg leading-8 text-slate-600"
+                    >
 
-                <summary
-                    class="cursor-pointer text-lg font-semibold text-slate-900"
-                >
+                        {data.subtitle}
 
-                    What is Static Website Generator?
+                    </p>
 
-                </summary>
-
-                <p
-                    class="mt-4 leading-7 text-slate-600"
-                >
-
-                    Static Website Generator is a content management
-                    system that exports structured JSON. Astro themes
-                    render that JSON into fast and secure static
-                    websites.
-
-                </p>
-
-            </details>
-
-            <details
-                class="rounded-2xl border border-slate-200 bg-white p-6"
-            >
-
-                <summary
-                    class="cursor-pointer text-lg font-semibold text-slate-900"
-                >
-
-                    Do I need to know Astro?
-
-                </summary>
-
-                <p
-                    class="mt-4 leading-7 text-slate-600"
-                >
-
-                    No. Content editors work entirely inside SWG.
-                    Developers can create or customize Astro themes
-                    using familiar Astro components.
-
-                </p>
-
-            </details>
-
-            <details
-                class="rounded-2xl border border-slate-200 bg-white p-6"
-            >
-
-                <summary
-                    class="cursor-pointer text-lg font-semibold text-slate-900"
-                >
-
-                    How is content stored?
-
-                </summary>
-
-                <p
-                    class="mt-4 leading-7 text-slate-600"
-                >
-
-                    Content is exported as structured JSON files inside
-                    the <code>export/</code> directory. This directory
-                    becomes the single source of truth for the Astro
-                    theme.
-
-                </p>
-
-            </details>
-
-            <details
-                class="rounded-2xl border border-slate-200 bg-white p-6"
-            >
-
-                <summary
-                    class="cursor-pointer text-lg font-semibold text-slate-900"
-                >
-
-                    Can I create my own themes?
-
-                </summary>
-
-                <p
-                    class="mt-4 leading-7 text-slate-600"
-                >
-
-                    Yes. SWG includes a starter theme and a CLI to help
-                    you build, validate and package reusable Astro
-                    themes.
-
-                </p>
-
-            </details>
-
-            <details
-                class="rounded-2xl border border-slate-200 bg-white p-6"
-            >
-
-                <summary
-                    class="cursor-pointer text-lg font-semibold text-slate-900"
-                >
-
-                    Is SWG suitable for production websites?
-
-                </summary>
-
-                <p
-                    class="mt-4 leading-7 text-slate-600"
-                >
-
-                    Absolutely. Generated websites are static,
-                    lightweight, secure and optimized for performance,
-                    SEO and modern hosting platforms.
-
-                </p>
-
-            </details>
+                )
+            }
 
         </div>
+
+        {
+            data.items?.length > 0 && (
+
+                <div
+                    class="mt-16 space-y-4"
+                >
+
+                    {
+                        data.items.map(
+                            item => (
+
+                                <details
+                                    class="rounded-2xl border border-slate-200 bg-white p-6"
+                                >
+
+                                    <summary
+                                        class="cursor-pointer text-lg font-semibold text-slate-900"
+                                    >
+
+                                        {item.question}
+
+                                    </summary>
+
+                                    <p
+                                        class="mt-4 leading-7 text-slate-600"
+                                    >
+
+                                        {item.answer}
+
+                                    </p>
+
+                                </details>
+
+                            )
+                        )
+                    }
+
+                </div>
+
+            )
+        }
 
     </div>
 

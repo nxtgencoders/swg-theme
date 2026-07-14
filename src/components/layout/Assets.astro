@@ -1,0 +1,83 @@
+---
+import {
+    getAssetsByLocation
+}
+from '../../lib/assets';
+
+const {
+    location
+} = Astro.props;
+
+const assets =
+    getAssetsByLocation(
+        location
+    );
+---
+
+{
+    assets.map(
+        asset => {
+
+            if (
+                asset.type === 'stylesheet'
+            ) {
+
+                if (
+                    asset.settings.source === 'external'
+                ) {
+
+                    return (
+
+                        <link
+                            rel="stylesheet"
+                            href={asset.settings.url}
+                        />
+
+                    );
+
+                }
+
+                return (
+
+                    <style
+                        set:html={asset.settings.content}
+                    />
+
+                );
+
+            }
+
+            if (
+                asset.type === 'script'
+            ) {
+
+                if (
+                    asset.settings.source === 'external'
+                ) {
+
+                    return (
+
+                        <script
+                            src={asset.settings.url}
+                        />
+
+                    );
+
+                }
+
+                return (
+
+                    <script
+                        is:inline
+                        set:html={asset.settings.content}
+                    />
+
+                );
+
+            }
+
+            return null;
+
+        }
+    )
+}

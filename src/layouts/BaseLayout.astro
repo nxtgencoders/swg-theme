@@ -1,6 +1,9 @@
 ---
 import '../styles/base.css';
 
+import SEO
+    from '../components/seo/SEO.astro';
+
 export interface Props {
 
     title?: string;
@@ -27,7 +30,10 @@ const {
         content="width=device-width, initial-scale=1.0"
     />
 
-    <title>{title}</title>
+    <SEO
+        page={page}
+        settings={settings}
+    />
 
     <!-- Tailwind CSS -->
     <script is:inline src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>

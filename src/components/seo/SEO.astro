@@ -1,0 +1,77 @@
+---
+const {
+    page,
+    settings
+} = Astro.props;
+
+const title =
+    page.meta_title ||
+    page.title;
+
+const description =
+    page.meta_description;
+
+const canonical =
+    page.canonical_url;
+
+const robots =
+    page.robots ||
+    settings.default_robots;
+
+const ogTitle =
+    page.og_title ||
+    title;
+
+const ogDescription =
+    page.og_description ||
+    description;
+
+const ogImage =
+    page.og_image;
+---
+
+<title>
+    {title}
+    {settings.title_separator}
+</title>
+
+<meta
+    name="description"
+    content={description}
+/>
+
+<meta
+    name="robots"
+    content={robots}
+/>
+
+<link
+    rel="canonical"
+    href={canonical}
+/>
+
+<meta
+    property="og:type"
+    content="website"
+/>
+
+<meta
+    property="og:title"
+    content={ogTitle}
+/>
+
+<meta
+    property="og:description"
+    content={ogDescription}
+/>
+
+{
+    ogImage && (
+
+        <meta
+            property="og:image"
+            content={ogImage}
+        />
+
+    )
+}

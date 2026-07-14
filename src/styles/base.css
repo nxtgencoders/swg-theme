@@ -71,3 +71,83 @@ pre {
         Menlo,
         monospace;
 }
+
+.markdown-content h1 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 3rem 0 1.5rem;
+}
+
+.markdown-content h2 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 2.5rem 0 1.25rem;
+}
+
+.markdown-content h3 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 2rem 0 1rem;
+}
+
+.markdown-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.markdown-content ul {
+    list-style: disc;
+}
+
+.markdown-content ol {
+    list-style: decimal;
+}
+
+.markdown-content li {
+    margin-bottom: .5rem;
+}
+
+.markdown-content a {
+    color: #1C64A5;
+    text-decoration: underline;
+}
+
+.markdown-content blockquote {
+    margin: 2rem 0;
+    padding-left: 1.5rem;
+    border-left: 4px solid #1C64A5;
+    color: #475569;
+    font-style: italic;
+}
+
+.markdown-content pre {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    border-radius: .75rem;
+    background: #0f172a;
+    color: #f8fafc;
+}
+
+.markdown-content code {
+    font-family: monospace;
+}
+
+.markdown-content :not(pre) > code {
+    padding: .125rem .375rem;
+    border-radius: .25rem;
+    background: #f1f5f9;
+}

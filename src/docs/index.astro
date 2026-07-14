@@ -1,6 +1,46 @@
 ---
-import DocsIndex
+import DocsIndexTemplate
     from '../../templates/DocsIndex.astro';
+
+import {
+    getArticles,
+    getCategories
+}
+from '../../lib/docs';
+
+const category = {
+
+    title: 'Documentation',
+
+    slug: 'docs'
+
+};
+
+const articles =
+    getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .sort(
+            (a, b) =>
+                new Date(
+                    b.published_at
+                ).getTime()
+                -
+                new Date(
+                    a.published_at
+                ).getTime()
+        );
+
+const categories =
+    getCategories();
 ---
 
-<DocsIndex />
+<DocsIndexTemplate
+    category={category}
+    categories={categories}
+    articles={articles}
+/>

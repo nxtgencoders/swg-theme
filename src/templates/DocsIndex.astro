@@ -12,26 +12,184 @@
 
 import BaseLayout
     from '../layouts/BaseLayout.astro';
+
+import Header
+    from '../components/layout/Header.astro';
+
+import Footer
+    from '../components/layout/Footer.astro';
+
+import CTA
+    from '../components/sections/CTA.astro';
+
+import {
+    getArticleUrl,
+    getCategoryUrl
+}
+from '../lib/docs';
+
+const {
+    category,
+    categories,
+    articles
+} = Astro.props;
+
+const page = {
+
+    title: 'Documentation',
+
+    meta_title:
+        'Documentation',
+
+    meta_description:
+        'Learn how to build websites and themes with Static Website Generator.',
+
+    canonical_url:
+        '/docs',
+
+    noindex: 0
+
+};
 ---
 
 <BaseLayout
-    title="Documentation"
+    page={page}
 >
 
-    <main>
+    <Header />
 
-        <header>
+    <section
+        class="border-b border-slate-200 bg-slate-50 py-20"
+    >
 
-            <h1>
+        <div
+            class="mx-auto max-w-4xl px-6 text-center lg:px-8"
+        >
+
+            <span
+                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+            >
+
                 Documentation
+
+            </span>
+
+            <h1
+                class="mt-4 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
+
+                Learn Static Website Generator
+
             </h1>
 
-            <p>
-                Welcome to the documentation homepage.
+            <p
+                class="mt-6 text-xl leading-8 text-slate-600"
+            >
+
+                Browse guides, tutorials and technical reference
+                documentation for Static Website Generator.
+
             </p>
 
-        </header>
+        </div>
 
-    </main>
+    </section>
+
+    <section
+        class="py-20"
+    >
+
+        <div
+            class="mx-auto max-w-7xl px-6 lg:px-8"
+        >
+
+            <div
+                class="mb-12 flex flex-wrap gap-3"
+            >
+
+                {
+                    categories.map(
+                        category => (
+
+                            <a
+                                href={getCategoryUrl(category)}
+                                class="rounded-full border border-slate-200 px-4 py-2 text-sm font-medium transition hover:border-[#1C64A5] hover:text-[#1C64A5]"
+                            >
+
+                                {category.name}
+
+                            </a>
+
+                        )
+                    )
+                }
+
+            </div>
+
+            <div
+                class="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            >
+
+                {
+                    articles.map(
+                        article => (
+
+                            <article
+                                class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                            >
+
+                                <h2
+                                    class="text-2xl font-bold text-slate-900"
+                                >
+
+                                    <a
+                                        href={getArticleUrl(article)}
+                                        class="transition hover:text-[#1C64A5]"
+                                    >
+
+                                        {article.title}
+
+                                    </a>
+
+                                </h2>
+
+                                {
+                                    article.excerpt && (
+
+                                        <p
+                                            class="mt-4 leading-7 text-slate-600"
+                                        >
+
+                                            {article.excerpt}
+
+                                        </p>
+
+                                    )
+                                }
+
+                                <a
+                                    href={getArticleUrl(article)}
+                                    class="mt-8 inline-flex items-center font-semibold text-[#1C64A5]"
+                                >
+
+                                    Read documentation →
+
+                                </a>
+
+                            </article>
+
+                        )
+                    )
+                }
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <CTA />
+
+    <Footer />
 
 </BaseLayout>

@@ -1,0 +1,26 @@
+{
+    "id": 1,
+    "category_id": 1,
+    "title": "CLI Reference",
+    "slug": "cli-reference",
+    "excerpt": "Learn how to use the Static Website Generator command line interface.",
+    "content": "# CLI Reference\n\nThe Static Website Generator CLI helps you validate, build and package themes.\n\n## Validate a Theme\n\nValidate your theme before packaging it.\n\n```bash\nnpm run validate\n```\n\nThe validator checks that all required templates, layouts and configuration files are present.\n\n## Package a Theme\n\nCreate a distributable SWG theme package.\n\n```bash\nnpm run package\n```\n\nThe resulting package can be imported directly into Static Website Generator.\n\n## Development Server\n\nStart the local development server.\n\n```bash\nnpm run dev\n```\n\nThis launches Astro and watches for file changes while you develop your theme.\n\n## Install Dependencies\n\nInstall all required dependencies.\n\n```bash\nnpm install\n```\n\n## Build for Production\n\nGenerate a production build of the theme.\n\n```bash\nnpm run build\n```\n\n## Typical Workflow\n\n```bash\nnpm install\nnpm run dev\nnpm run validate\nnpm run package\n```\n\nFollowing this workflow ensures your theme is ready for import into Static Website Generator.",
+    "featured_image": "",
+    "meta_title": "CLI Reference",
+    "meta_description": "Reference for the Static Website Generator command line interface.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "cli",
+        "documentation",
+        "themes",
+        "development"
+    ],
+    "status": "published",
+    "published_at": "2026-07-14 14:45:00",
+    "sort_order": 1,
+    "created_at": "2026-07-14 14:45:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 4
+}

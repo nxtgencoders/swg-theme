@@ -1,13 +1,70 @@
 ---
-import DocsArticle
-    from '../../templates/DocsArticle.astro';
+import DocsArticleTemplate
+    from '../../../templates/DocsArticle.astro';
 
-export function getStaticPaths() {
+import {
+    getArticles,
+    getArticle,
+    getCategory
+}
+from '../../../lib/docs';
 
-    return [];
+export async function getStaticPaths() {
+
+    return getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .map(
+            article => {
+
+                const category =
+                    getCategory(
+                        article.category_id
+                    );
+
+                return {
+
+                    params: {
+
+                        category:
+                            category!.slug,
+
+                        slug:
+                            article.slug
+
+                    }
+
+                };
+
+            }
+        );
 
 }
 
+const article =
+    getArticle(
+        Astro.params.slug!
+    );
+
+if (!article) {
+
+    throw new Error(
+        `Documentation article '${Astro.params.slug}' not found.`
+    );
+
+}
+
+const category =
+    getCategory(
+        article.category_id
+    );
 ---
 
-<DocsArticle />
+<DocsArticleTemplate
+    article={article}
+    category={category}
+/>

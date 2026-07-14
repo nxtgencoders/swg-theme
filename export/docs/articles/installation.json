@@ -1,0 +1,26 @@
+{
+    "id": 4,
+    "category_id": 1,
+    "title": "Installation",
+    "slug": "installation",
+    "excerpt": "Install the Theme Starter and prepare your development environment for Static Website Generator.",
+    "content": "# Installation\n\nThis guide walks you through installing the Static Website Generator Theme Starter.\n\n## Prerequisites\n\nBefore installing the Theme Starter, make sure you have the following software available:\n\n- Node.js 22 or later\n- npm\n- Git\n\nVerify your installation:\n\n```bash\nnode -v\nnpm -v\ngit --version\n```\n\n## Clone the Repository\n\nClone the Theme Starter repository.\n\n```bash\ngit clone https://github.com/staticwebsitegenerator/theme-starter.git\ncd swg-theme\n```\n\n## Install Dependencies\n\nInstall all required packages.\n\n```bash\nnpm install\n```\n\n## Start the Development Server\n\nLaunch the Astro development server.\n\n```bash\nnpm run dev\n```\n\nThe development server watches your files and automatically reloads your browser whenever changes are detected.\n\n## Validate the Theme\n\nBefore creating a package, validate your theme.\n\n```bash\nnpm run validate\n```\n\nA successful validation confirms that your theme contains all required layouts, templates and configuration files expected by Static Website Generator.\n\n## Package the Theme\n\nOnce development is complete, package the theme.\n\n```bash\nnpm run package\n```\n\nThis generates an SWG theme package that can be imported directly into Static Website Generator.\n\n## Recommended Development Workflow\n\n```bash\ngit clone <repository>\ncd swg-theme\nnpm install\nnpm run dev\nnpm run validate\nnpm run package\n```\n\nFollowing this workflow ensures your theme remains compatible with SWG throughout development.",
+    "featured_image": "",
+    "meta_title": "Installation",
+    "meta_description": "Install the Static Website Generator Theme Starter and prepare your development environment.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "installation",
+        "setup",
+        "theme-starter",
+        "astro"
+    ],
+    "status": "published",
+    "published_at": "2026-07-14 15:30:00",
+    "sort_order": 2,
+    "created_at": "2026-07-14 15:30:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 5
+}

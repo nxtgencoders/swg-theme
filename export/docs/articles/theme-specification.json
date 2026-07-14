@@ -1,0 +1,26 @@
+{
+    "id": 5,
+    "category_id": 1,
+    "title": "Theme Specification",
+    "slug": "theme-specification",
+    "excerpt": "Learn the requirements and structure of a Static Website Generator theme.",
+    "content": "# Theme Specification\n\nEvery Static Website Generator (SWG) theme follows a simple contract. A theme is a standard Astro project that contains a fixed set of required templates. Everything else is completely up to the theme developer.\n\n## Required Directory Structure\n\n```text\nsrc/\n├── components/\n├── layouts/\n├── templates/\n└── styles/\n```\n\nAdditional directories may be added as needed.\n\n## Required Layouts\n\nEvery theme must contain the following layout:\n\n- BaseLayout.astro\n\n## Required Templates\n\nEvery SWG theme must provide these templates:\n\n- Homepage.astro\n- Page.astro\n- BlogIndex.astro\n- BlogCategory.astro\n- BlogArticle.astro\n- DocsIndex.astro\n- DocsCategory.astro\n- DocsArticle.astro\n\nThese templates form the contract between SWG and your theme.\n\n## JSON First\n\nSWG exports all content as JSON. Themes never communicate directly with the CMS or a database.\n\nTypical export structure:\n\n```text\nexport/\n├── pages/\n├── blog/\n│   ├── categories.json\n│   └── articles/\n├── docs/\n│   ├── categories.json\n│   └── articles/\n├── menus/\n└── settings/\n```\n\nThemes read these files using helper functions such as `pages.ts`, `blog.ts`, `docs.ts`, `menus.ts` and `settings.ts`.\n\n## Theme Validation\n\nBefore packaging a theme, validate it using:\n\n```bash\nnpm run validate\n```\n\nThe validator checks the required directories, layouts, templates and configuration files.\n\n## Theme Package\n\nPackage your theme with:\n\n```bash\nnpm run package\n```\n\nThe generated package can be imported directly into Static Website Generator.\n\n## Theme Freedom\n\nSWG only validates the required contract.\n\nEverything else is entirely up to the theme developer.\n\nExamples include:\n\n- Component structure\n- Folder organization\n- Styling approach\n- Astro component composition\n- JavaScript architecture\n\nAs long as the required templates exist and validation succeeds, the theme is considered SWG compatible.",
+    "featured_image": "",
+    "meta_title": "Theme Specification",
+    "meta_description": "Specification and requirements for building Static Website Generator themes.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "themes",
+        "specification",
+        "astro",
+        "theme-development"
+    ],
+    "status": "published",
+    "published_at": "2026-07-14 15:45:00",
+    "sort_order": 5,
+    "created_at": "2026-07-14 15:45:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 7
+}

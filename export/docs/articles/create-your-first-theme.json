@@ -1,0 +1,26 @@
+{
+    "id": 2,
+    "category_id": 1,
+    "title": "Create Your First Theme",
+    "slug": "create-your-first-theme",
+    "excerpt": "Learn how to create your first Static Website Generator theme using Astro and the Theme Starter.",
+    "content": "# Create Your First Theme\n\nBuilding a theme for Static Website Generator starts with the official Theme Starter.\n\n## Clone the Theme Starter\n\nClone the repository and install the dependencies.\n\n```bash\ngit clone https://github.com/staticwebsitegenerator/theme-starter.git\ncd swg-theme\nnpm install\n```\n\n## Start the Development Server\n\nRun Astro in development mode.\n\n```bash\nnpm run dev\n```\n\nThe Theme Starter contains example pages, blog articles and documentation that mirror the SWG export format.\n\n## Theme Structure\n\nA theme consists of layouts, components and the required SWG templates.\n\n```text\nsrc/\n├── components/\n├── layouts/\n├── templates/\n└── styles/\n```\n\nThe internal structure is completely up to the theme developer.\n\n## Required Templates\n\nEvery theme must provide the required SWG templates.\n\n- Homepage\n- Page\n- Blog Index\n- Blog Category\n- Blog Article\n- Docs Index\n- Docs Category\n- Docs Article\n\nThese templates form the contract between your theme and Static Website Generator.\n\n## Validate Your Theme\n\nBefore packaging your theme, validate it.\n\n```bash\nnpm run validate\n```\n\nThe validator checks whether your theme is compatible with SWG.\n\n## Package Your Theme\n\nWhen your theme is finished, create a distributable package.\n\n```bash\nnpm run package\n```\n\nThe generated package can be imported directly into Static Website Generator.",
+    "featured_image": "",
+    "meta_title": "Create Your First Theme",
+    "meta_description": "Learn how to build your first Static Website Generator theme using Astro and the official Theme Starter.",
+    "canonical_url": "",
+    "noindex": 0,
+    "tags": [
+        "themes",
+        "astro",
+        "theme-starter",
+        "getting-started"
+    ],
+    "status": "published",
+    "published_at": "2026-07-14 15:00:00",
+    "sort_order": 2,
+    "created_at": "2026-07-14 15:00:00",
+    "updated_at": null,
+    "sections": null,
+    "reading_time": 5
+}

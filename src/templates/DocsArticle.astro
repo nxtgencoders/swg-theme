@@ -7,43 +7,109 @@
  *
  * This template is rendered by:
  *
- * src/pages/docs/[...slug].astro
+ * src/pages/docs/[category]/[...slug].astro
  */
 
 import BaseLayout
     from '../layouts/BaseLayout.astro';
+
+import Header
+    from '../components/layout/Header.astro';
+
+import Footer
+    from '../components/layout/Footer.astro';
+
+import CTA
+    from '../components/sections/CTA.astro';
+
+import MarkdownContent
+    from '../components/content/MarkdownContent.astro';
+
+const {
+    article,
+    category
+} = Astro.props;
 ---
 
 <BaseLayout
-    title="Documentation Article"
+    page={article}
 >
 
-    <main>
+    <Header />
 
-        <article>
+    <section
+        class="border-b border-slate-200 bg-slate-50 py-20"
+    >
 
-            <header>
+        <div
+            class="mx-auto max-w-4xl px-6 lg:px-8"
+        >
 
-                <h1>
-                    Documentation Article
-                </h1>
+            <span
+                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+            >
 
-                <p>
-                    This is the default SWG documentation article template.
-                </p>
+                Documentation
 
-            </header>
+            </span>
 
-            <section>
+            <h1
+                class="mt-4 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
 
-                <p>
-                    The documentation content will be rendered here.
-                </p>
+                {article.title}
 
-            </section>
+            </h1>
 
-        </article>
+            <p
+                class="mt-6 text-xl leading-8 text-slate-600"
+            >
 
-    </main>
+                {category?.name}
+
+            </p>
+
+            <div
+                class="mt-8 flex items-center gap-6 text-sm text-slate-500"
+            >
+
+                <span>
+
+                    {
+                        new Date(
+                            article.published_at
+                        ).toLocaleDateString(
+                            'en-US',
+                            {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            }
+                        )
+                    }
+
+                </span>
+
+                <span>
+
+                    {article.reading_time}
+                    {' '}
+                    min read
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <MarkdownContent
+        page={article}
+    />
+
+    <CTA />
+
+    <Footer />
 
 </BaseLayout>

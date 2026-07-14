@@ -1,6 +1,32 @@
 {
+    "id": 4,
     "title": "Pricing",
     "slug": "pricing",
+    "status": "published",
+    "published_at": "2026-07-14 12:00:00",
+    "created_at": "2026-07-14 12:00:00",
+    "updated_at": "2026-07-14 12:00:00",
+    "is_homepage": 0,
     "template": "page",
-    "content": "# Pricing\n\nDescribe your pricing plans."
+    "editor": "markdown",
+    "meta_title": "Pricing | Static Website Generator",
+    "meta_description": "Simple and transparent pricing for Static Website Generator. Choose the plan that best fits your projects and workflow.",
+    "canonical_url": "https://staticwebsitegenerator.com/pricing",
+    "robots": "index,follow",
+    "og_title": "Pricing | Static Website Generator",
+    "og_description": "Explore the pricing plans for Static Website Generator and find the perfect option for your websites.",
+    "og_image": "",
+    "template_name": "page",
+    "template_label": "Page",
+    "category_id": null,
+    "excerpt": "Simple pricing designed for developers, freelancers and agencies.",
+    "content": "# Pricing\n\nStatic Website Generator offers flexible plans for individuals, freelancers, agencies and growing teams.\n\n## Starter\n\nPerfect for personal websites and small projects.\n\n- Manage one website\n- JSON content management\n- Astro theme support\n- Static site generation\n\n## Professional\n\nDesigned for freelancers and professionals managing multiple websites.\n\n- Multiple websites\n- Theme import and export\n- Documentation and blog support\n- AI-assisted content tools\n\n## Agency\n\nBuilt for agencies and organizations that manage multiple client websites.\n\n- Unlimited websites\n- Shared theme library\n- Team collaboration\n- Priority support\n\n## Need Something Custom?\n\nContact us to discuss enterprise features, custom integrations and tailored deployment solutions.",
+    "feature_image": "",
+    "tags": [
+        "pricing",
+        "plans",
+        "subscription",
+        "saas"
+    ],
+    "reading_time": 2
 }

@@ -1,6 +1,32 @@
 {
+    "id": 4,
     "title": "About",
     "slug": "about",
+    "status": "published",
+    "published_at": "2026-07-14 12:00:00",
+    "created_at": "2026-07-14 12:00:00",
+    "updated_at": "2026-07-14 12:00:00",
+    "is_homepage": 0,
     "template": "page",
-    "content": "# About\n\nThis is an example page."
+    "editor": "markdown",
+    "meta_title": "About | Static Website Generator",
+    "meta_description": "Learn more about Static Website Generator and our mission to make building static websites simple, fast and maintainable.",
+    "canonical_url": "https://staticwebsitegenerator.com/about",
+    "robots": "index,follow",
+    "og_title": "About | Static Website Generator",
+    "og_description": "Learn more about Static Website Generator and how it simplifies modern static website development.",
+    "og_image": "",
+    "template_name": "page",
+    "template_label": "Page",
+    "category_id": null,
+    "excerpt": "Learn more about Static Website Generator and the philosophy behind the project.",
+    "content": "# About\n\nStatic Website Generator (SWG) is a modern content management system for building fast, secure and maintainable static websites.\n\n## Our Mission\n\nWe believe content should remain independent from presentation. SWG stores content as JSON while Astro focuses on rendering beautiful websites.\n\n## Built for Developers\n\nThemes are standard Astro projects that can be developed locally, packaged and imported directly into SWG.\n\n## Built for Content Teams\n\nEditors can manage pages, blogs, documentation and media without touching code while developers remain in full control over the presentation layer.\n\n## Why Static Websites?\n\nStatic websites are fast, secure, scalable and easy to deploy. By separating content from presentation, SWG provides a predictable workflow for both developers and content creators.",
+    "feature_image": "",
+    "tags": [
+        "about",
+        "astro",
+        "json",
+        "static websites"
+    ],
+    "reading_time": 2
 }

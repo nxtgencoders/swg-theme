@@ -1,6 +1,32 @@
 {
+    "id": 6,
     "title": "Terms of Service",
     "slug": "terms-of-service",
+    "status": "published",
+    "published_at": "2026-07-14 12:00:00",
+    "created_at": "2026-07-14 12:00:00",
+    "updated_at": "2026-07-14 12:00:00",
+    "is_homepage": 0,
     "template": "page",
-    "content": "# Terms of Service\n\nDescribe your terms of service here."
+    "editor": "markdown",
+    "meta_title": "Terms of Service | Static Website Generator",
+    "meta_description": "Read the Terms of Service for Static Website Generator and understand the conditions for using our platform.",
+    "canonical_url": "https://staticwebsitegenerator.com/terms-of-service",
+    "robots": "index,follow",
+    "og_title": "Terms of Service | Static Website Generator",
+    "og_description": "Review the Terms of Service for using Static Website Generator and its related services.",
+    "og_image": "",
+    "template_name": "page",
+    "template_label": "Page",
+    "category_id": null,
+    "excerpt": "Please read these Terms of Service carefully before using Static Website Generator.",
+    "content": "# Terms of Service\n\nWelcome to Static Website Generator (SWG). By accessing or using our platform, you agree to these Terms of Service.\n\n## Acceptance of Terms\n\nBy using SWG, you agree to comply with these terms and all applicable laws and regulations.\n\n## Use of the Platform\n\nYou may use SWG to create, manage and publish static websites in accordance with these terms.\n\n## User Responsibilities\n\nYou are responsible for the content you create and publish using the platform. You agree not to use SWG for unlawful or harmful activities.\n\n## Intellectual Property\n\nUnless otherwise stated, all software, branding and documentation related to SWG remain the intellectual property of their respective owners.\n\n## Disclaimer\n\nSWG is provided on an \"as is\" basis without warranties of any kind. We do our best to provide a reliable platform but cannot guarantee uninterrupted availability.\n\n## Changes to These Terms\n\nWe may update these Terms of Service from time to time. Continued use of the platform constitutes acceptance of any updated terms.\n\n## Contact\n\nIf you have any questions regarding these Terms of Service, please contact us through the contact page.",
+    "feature_image": "",
+    "tags": [
+        "terms",
+        "legal",
+        "service",
+        "agreement"
+    ],
+    "reading_time": 2
 }

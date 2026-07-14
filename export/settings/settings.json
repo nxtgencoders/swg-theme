@@ -1,0 +1,11 @@
+{
+    "language": "en",
+    "company_name": "Static Website Generator",
+    "default_robots": "index,follow",
+    "footer": "© 2026 Static Website Generator. All rights reserved.",
+    "site_name": "Static Website Generator",
+    "site_url": "https://staticwebsitegenerator.com",
+    "support_email": "hello@staticwebsitegenerator.com",
+    "tagline": "Build fast, secure and maintainable static websites with Astro and JSON.",
+    "title_separator": "| Static Website Generator"
+}

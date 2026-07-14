@@ -1,6 +1,32 @@
 {
+    "id": 3,
     "title": "Contact",
     "slug": "contact",
+    "status": "published",
+    "published_at": "2026-07-14 12:00:00",
+    "created_at": "2026-07-14 12:00:00",
+    "updated_at": "2026-07-14 12:00:00",
+    "is_homepage": 0,
     "template": "page",
-    "content": "# Contact\n\nWe'd love to hear from you."
+    "editor": "markdown",
+    "meta_title": "Contact | Static Website Generator",
+    "meta_description": "Get in touch with the Static Website Generator team. We'd love to hear your questions, feedback or ideas.",
+    "canonical_url": "https://staticwebsitegenerator.com/contact",
+    "robots": "index,follow",
+    "og_title": "Contact | Static Website Generator",
+    "og_description": "Contact the Static Website Generator team for questions, feedback or support.",
+    "og_image": "",
+    "template_name": "page",
+    "template_label": "Page",
+    "category_id": null,
+    "excerpt": "Have a question or feedback? We'd love to hear from you.",
+    "content": "# Contact\n\nThank you for your interest in Static Website Generator.\n\n## Get in Touch\n\nWhether you have a question about SWG, found a bug, have a feature request or simply want to say hello, we'd love to hear from you.\n\n## Community\n\nStatic Website Generator is built with developers in mind. Feedback and suggestions help shape the future of the project.\n\n## Support\n\nIf you're using SWG and need assistance, please visit the documentation or reach out through the available support channels.\n\nWe look forward to hearing from you!",
+    "feature_image": "",
+    "tags": [
+        "contact",
+        "support",
+        "community",
+        "static websites"
+    ],
+    "reading_time": 1
 }

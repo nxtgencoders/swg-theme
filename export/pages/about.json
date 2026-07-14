@@ -1,0 +1,6 @@
+{
+    "title": "About",
+    "slug": "about",
+    "template": "page",
+    "content": "# About\n\nThis is an example page."
+}

@@ -58,8 +58,9 @@ const assets =
                     return (
 
                         <script
+                            is:inline
                             src={asset.settings.url}
-                        />
+                        ></script>
 
                     );
 
@@ -67,10 +68,10 @@ const assets =
 
                 return (
 
-                    <script
-                        is:inline
-                        set:html={asset.settings.content}
-                    />
+                <script
+                    is:inline
+                    set:html={asset.settings.content}
+                ></script>
 
                 );
 

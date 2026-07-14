@@ -1,26 +1,227 @@
 ---
 import BaseLayout
     from '../layouts/BaseLayout.astro';
+
+import Header
+    from '../components/layout/Header.astro';
+
+import Footer
+    from '../components/layout/Footer.astro';
+
+import CTA
+    from '../components/sections/CTA.astro';
+
+import {
+    getArticles
+}
+from '../lib/blog';
+
+const articles =
+    getArticles()
+
+        .filter(
+            article =>
+                article.status === 'published'
+        )
+
+        .sort(
+            (a, b) =>
+                new Date(
+                    b.published_at
+                ).getTime()
+                -
+                new Date(
+                    a.published_at
+                ).getTime()
+        );
+
+const page = {
+
+    title: 'Blog',
+
+    meta_title:
+        'Blog',
+
+    meta_description:
+        'Read the latest articles, tutorials and updates about Static Website Generator.',
+
+    canonical_url:
+        'https://staticwebsitegenerator.com/blog',
+
+    robots:
+        'index,follow',
+
+    og_title:
+        'Blog',
+
+    og_description:
+        'Read the latest articles, tutorials and updates about Static Website Generator.',
+
+    og_image: ''
+
+};
 ---
 
 <BaseLayout
-    title="Blog"
+    page={page}
 >
 
-    <main>
+    <Header />
 
-        <header>
+    <section
+        class="border-b border-slate-200 bg-slate-50 py-20"
+    >
 
-            <h1>
+        <div
+            class="mx-auto max-w-4xl px-6 text-center lg:px-8"
+        >
+
+            <span
+                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+            >
+
                 Blog
+
+            </span>
+
+            <h1
+                class="mt-4 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
+
+                Articles, tutorials
+                and product updates.
+
             </h1>
 
-            <p>
-                Welcome to the blog index.
+            <p
+                class="mt-6 text-xl leading-8 text-slate-600"
+            >
+
+                Discover tutorials, guides and updates to help you
+                build modern static websites with Static Website
+                Generator.
+
             </p>
 
-        </header>
+        </div>
 
-    </main>
+    </section>
+
+    <section
+        class="py-20"
+    >
+
+        <div
+            class="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 lg:grid-cols-3 lg:px-8"
+        >
+
+            {
+                articles.map(
+                    article => (
+
+                        <article
+                            class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                        >
+
+                            {
+                                article.featured_image && (
+
+                                    <img
+                                        src={`/media/${article.featured_image}`}
+                                        alt={article.title}
+                                        class="aspect-[16/9] w-full object-cover"
+                                    />
+
+                                )
+                            }
+
+                            <div
+                                class="p-8"
+                            >
+
+                                <div
+                                    class="flex items-center justify-between text-sm text-slate-500"
+                                >
+
+                                    <span>
+
+                                        {
+                                            new Date(
+                                                article.published_at
+                                            ).toLocaleDateString(
+                                                'en-US',
+                                                {
+                                                    year: 'numeric',
+                                                    month: 'long',
+                                                    day: 'numeric'
+                                                }
+                                            )
+                                        }
+
+                                    </span>
+
+                                    <span>
+
+                                        {article.reading_time}
+                                        {' '}
+                                        min read
+
+                                    </span>
+
+                                </div>
+
+                                <h2
+                                    class="mt-4 text-2xl font-bold text-slate-900"
+                                >
+
+                                    <a
+                                        href={`/blog/${article.slug}`}
+                                        class="transition hover:text-[#1C64A5]"
+                                    >
+
+                                        {article.title}
+
+                                    </a>
+
+                                </h2>
+
+                                {
+                                    article.excerpt && (
+
+                                        <p
+                                            class="mt-4 leading-7 text-slate-600"
+                                        >
+
+                                            {article.excerpt}
+
+                                        </p>
+
+                                    )
+                                }
+
+                                <a
+                                    href={`/blog/${article.slug}`}
+                                    class="mt-8 inline-flex items-center font-semibold text-[#1C64A5] transition hover:gap-3"
+                                >
+
+                                    Read article →
+
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    )
+                )
+            }
+
+        </div>
+
+    </section>
+
+    <CTA />
+
+    <Footer />
 
 </BaseLayout>

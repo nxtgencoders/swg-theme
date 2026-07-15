@@ -29,6 +29,13 @@ const {
     article,
     category
 } = Astro.props;
+
+
+const cta =
+    article.sections?.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -108,9 +115,13 @@ const {
         page={article}
     />
 
-    <CTA
-        data={page.sections[0].data}
-    />
+    {cta && (
+
+        <CTA
+            data={cta.data}
+        />
+
+    )}
 
     <Footer />
 

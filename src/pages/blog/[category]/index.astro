@@ -31,14 +31,14 @@ const category =
     getCategories()
 
         .find(
-            category =>
-                category.slug === Astro.params.slug
+            item =>
+                item.slug === Astro.params.category
         );
 
 if (!category) {
 
     throw new Error(
-        `Blog category '${Astro.params.slug}' not found.`
+        `Blog category '${Astro.params.category}' not found.`
     );
 
 }

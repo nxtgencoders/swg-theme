@@ -20,6 +20,13 @@ import Footer
 const {
     page
 } = Astro.props;
+
+const cta =
+    page.sections.find(
+        section =>
+            section.type === 'cta'
+    );
+
 ---
 
 <BaseLayout
@@ -36,9 +43,13 @@ const {
         page={page}
     />
 
-    <CTA
-        data={page.sections[0].data}
-    />
+    {cta && (
+
+        <CTA
+            data={cta.data}
+        />
+
+    )}
 
     <Footer />
 

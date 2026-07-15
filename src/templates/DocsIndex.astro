@@ -36,7 +36,8 @@ const {
 
 const page = {
 
-    title: 'Documentation',
+    title:
+        'Documentation',
 
     meta_title:
         'Documentation',
@@ -47,9 +48,58 @@ const page = {
     canonical_url:
         '/docs',
 
-    noindex: 0
+    noindex:
+        0,
+
+    sections: [
+
+        {
+            type: 'cta',
+
+            data: {
+
+                eyebrow:
+                    'Ready to start building?',
+
+                title:
+                    'Explore the SWG documentation.',
+
+                subtitle:
+                    'Discover guides, technical references and theme documentation to build fast, modern static websites with Static Website Generator.',
+
+                buttons: [
+
+                    {
+                        label:
+                            'Getting Started',
+
+                        url:
+                            '/docs/getting-started'
+                    },
+
+                    {
+                        label:
+                            'Theme Documentation',
+
+                        url:
+                            '/docs/themes'
+                    }
+
+                ]
+
+            }
+
+        }
+
+    ]
 
 };
+
+const cta =
+    page.sections.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -188,9 +238,13 @@ const page = {
 
     </section>
 
-    <CTA
-        data={page.sections[0].data}
-    />
+    {cta && (
+
+        <CTA
+            data={cta.data}
+        />
+
+    )}
 
     <Footer />
 

@@ -1,0 +1,97 @@
+---
+import BaseLayout
+    from '../layouts/BaseLayout.astro';
+
+import Header
+    from '../components/layout/Header.astro';
+
+import Footer
+    from '../components/layout/Footer.astro';
+
+const page = {
+
+    title:
+        '500 - Internal Server Error',
+
+    meta_title:
+        '500 - Internal Server Error',
+
+    meta_description:
+        'An unexpected error occurred.',
+
+    canonical_url:
+        '/500',
+
+    noindex:
+        1
+
+};
+---
+
+<BaseLayout page={page}>
+
+    <Header />
+
+    <section
+        class="py-32"
+    >
+
+        <div
+            class="mx-auto max-w-3xl px-6 text-center"
+        >
+
+            <span
+                class="text-sm font-semibold uppercase tracking-widest text-red-600"
+            >
+
+                Error 500
+
+            </span>
+
+            <h1
+                class="mt-6 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
+
+                Something went wrong
+
+            </h1>
+
+            <p
+                class="mt-6 text-lg leading-8 text-slate-600"
+            >
+
+                An unexpected error occurred while processing your request. Please try again later.
+
+            </p>
+
+            <div
+                class="mt-12 flex flex-wrap justify-center gap-4"
+            >
+
+                <a
+                    href="/"
+                    class="rounded-xl bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                >
+
+                    Return Home
+
+                </a>
+
+                <a
+                    href="/contact"
+                    class="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:bg-slate-100"
+                >
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <Footer />
+
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+import BaseLayout
+    from '../layouts/BaseLayout.astro';
+
+import Header
+    from '../components/layout/Header.astro';
+
+import Footer
+    from '../components/layout/Footer.astro';
+
+const page = {
+
+    title:
+        '404 - Page Not Found',
+
+    meta_title:
+        '404 - Page Not Found',
+
+    meta_description:
+        'The requested page could not be found.',
+
+    canonical_url:
+        '/404',
+
+    noindex:
+        1
+
+};
+---
+
+<BaseLayout page={page}>
+
+    <Header />
+
+    <section
+        class="py-32"
+    >
+
+        <div
+            class="mx-auto max-w-3xl px-6 text-center"
+        >
+
+            <span
+                class="text-sm font-semibold uppercase tracking-widest text-[#1C64A5]"
+            >
+
+                Error 404
+
+            </span>
+
+            <h1
+                class="mt-6 text-5xl font-extrabold tracking-tight text-slate-900"
+            >
+
+                Page not found
+
+            </h1>
+
+            <p
+                class="mt-6 text-lg leading-8 text-slate-600"
+            >
+
+                The page you're looking for doesn't exist or may have been moved.
+
+            </p>
+
+            <div
+                class="mt-12 flex flex-wrap justify-center gap-4"
+            >
+
+                <a
+                    href="/"
+                    class="rounded-xl bg-[#1C64A5] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                >
+
+                    Back to Homepage
+
+                </a>
+
+                <a
+                    href="/docs"
+                    class="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:bg-slate-100"
+                >
+
+                    Documentation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <Footer />
+
+</BaseLayout>

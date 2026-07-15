@@ -1,5 +1,6 @@
 .build/
 ROADMAP.md
+GITHUB.md
 node_modules/
 .astro/
 dist/

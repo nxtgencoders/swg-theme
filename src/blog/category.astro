@@ -1,6 +1,76 @@
 ---
-import BlogCategory
+import BlogCategoryTemplate
     from '../../templates/BlogCategory.astro';
+
+import {
+    getArticles,
+    getCategories
+}
+from '../../lib/blog';
+
+export async function getStaticPaths() {
+
+    const categories = getCategories();
+
+    console.log(categories);
+
+    return categories.map(category => ({
+        params: {
+            category: category.slug
+        }
+    }));
+}
+
+console.log('Params:', Astro.params);
+
+const category =
+    getCategories()
+
+console.log('Categories:', categories);
+
+        .find(
+            item =>
+                item.slug === Astro.params.category
+        );
+
+if (!category) {
+
+    throw new Error(
+        `Blog category '${Astro.params.category}' not found.`
+    );
+
+}
+
+const posts =
+    getArticles()
+
+        .filter(
+            article =>
+
+                article.status === 'published'
+
+                &&
+
+                article.category_id === category.id
+        )
+
+        .sort(
+            (a, b) =>
+
+                new Date(
+                    b.published_at
+                ).getTime()
+
+                -
+
+                new Date(
+                    a.published_at
+                ).getTime()
+        );
+
 ---
 
-<BlogCategory />
+<BlogCategoryTemplate
+    category={category}
+    posts={posts}
+/>

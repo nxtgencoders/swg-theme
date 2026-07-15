@@ -4,10 +4,6 @@
  *
  * Template:
  * Blog Article
- *
- * This template is rendered by:
- *
- * src/pages/blog/[category]/[...slug].astro
  */
 
 import BaseLayout
@@ -29,6 +25,12 @@ const {
     article,
     category
 } = Astro.props;
+
+const cta =
+    category.sections?.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -100,7 +102,13 @@ const {
         page={article}
     />
 
-    <CTA />
+    {cta && (
+
+        <CTA
+            data={cta.data}
+        />
+
+    )}
 
     <Footer />
 

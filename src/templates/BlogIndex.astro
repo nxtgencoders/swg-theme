@@ -49,7 +49,8 @@ const articles =
 
 const page = {
 
-    title: 'Blog',
+    title:
+        'Blog',
 
     meta_title:
         'Blog',
@@ -69,9 +70,58 @@ const page = {
     og_description:
         'Read the latest articles, tutorials and updates about Static Website Generator.',
 
-    og_image: ''
+    og_image:
+        '',
+
+    sections: [
+
+        {
+            type: 'cta',
+
+            data: {
+
+                eyebrow:
+                    'Want to learn more?',
+
+                title:
+                    'Continue building with SWG.',
+
+                subtitle:
+                    'Explore our documentation, tutorials and examples to get the most out of Static Website Generator.',
+
+                buttons: [
+
+                    {
+                        label:
+                            'Read Documentation',
+
+                        url:
+                            '/docs'
+                    },
+
+                    {
+                        label:
+                            'Browse Tutorials',
+
+                        url:
+                            '/blog/getting-started'
+                    }
+
+                ]
+
+            }
+
+        }
+
+    ]
 
 };
+
+const cta =
+    page.sections.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -230,7 +280,13 @@ const page = {
 
     </section>
 
-    <CTA />
+        {cta && (
+
+            <CTA
+                data={cta.data}
+            />
+
+        )}
 
     <Footer />
 

@@ -47,9 +47,54 @@ const page = {
         `/blog/${category.slug}`,
 
     noindex:
-        0
+        0,
+
+    sections: [
+
+        {
+            type: 'cta',
+
+            data: {
+
+                eyebrow:
+                    'Enjoyed this article?',
+
+                title:
+                    'Continue learning with SWG.',
+
+                buttons: [
+
+                    {
+                        label:
+                            'Read More Articles',
+
+                        url:
+                            '/blog'
+                    },
+
+                    {
+                        label:
+                            'Get Started',
+
+                        url:
+                            '/docs/getting-started'
+                    }
+
+                ]
+
+            }
+
+        }
+
+    ]
 
 };
+
+const cta =
+    category.sections?.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -207,7 +252,14 @@ const page = {
 
     </section>
 
-    <CTA />
+        {cta && (
+
+            <CTA
+                data={cta.data}
+            />
+
+        )}
+
 
     <Footer />
 

@@ -10,7 +10,26 @@
         "created_at": "2026-07-14 12:00:00",
         "description": "Learn the basics of Static Website Generator and get up and running quickly.",
         "color": "blue",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Ready for the next step?",
+                    "title": "Start building with Static Website Generator.",
+                    "subtitle": "Continue with the Getting Started documentation and create your first static website using SWG.",
+                    "buttons": [
+                        {
+                            "label": "Getting Started Guide",
+                            "url": "/docs/getting-started"
+                        },
+                        {
+                            "label": "Browse Documentation",
+                            "url": "/docs"
+                        }
+                    ]
+                }
+            }
+        ]
     },
     {
         "id": 11,
@@ -23,7 +42,26 @@
         "created_at": "2026-07-14 12:00:00",
         "description": "Articles about building, customizing and packaging Astro themes for SWG.",
         "color": "green",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Build your own theme",
+                    "title": "Learn how to create Astro themes for SWG.",
+                    "subtitle": "Read the complete theme documentation and discover how to package and distribute your own SWG themes.",
+                    "buttons": [
+                        {
+                            "label": "Theme Documentation",
+                            "url": "/docs/themes"
+                        },
+                        {
+                            "label": "View Theme Articles",
+                            "url": "/blog/themes"
+                        }
+                    ]
+                }
+            }
+        ]
     },
     {
         "id": 12,
@@ -36,6 +74,25 @@
         "created_at": "2026-07-14 12:00:00",
         "description": "Product announcements, release notes and updates from the Static Website Generator project.",
         "color": "violet",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Stay up to date",
+                    "title": "Explore what's new in Static Website Generator.",
+                    "subtitle": "Follow the latest releases, product announcements and development updates, or continue exploring the documentation.",
+                    "buttons": [
+                        {
+                            "label": "View Documentation",
+                            "url": "/docs"
+                        },
+                        {
+                            "label": "All Blog Articles",
+                            "url": "/blog"
+                        }
+                    ]
+                }
+            }
+        ]
     }
 ]

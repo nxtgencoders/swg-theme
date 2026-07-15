@@ -47,9 +47,18 @@ const page = {
         `/docs/${category.slug}`,
 
     noindex:
-        0
+        0,
+
+    sections:
+        category.sections ?? []
 
 };
+
+const cta =
+    page.sections.find(
+        section =>
+            section.type === 'cta'
+    );
 ---
 
 <BaseLayout
@@ -158,7 +167,13 @@ const page = {
 
     </section>
 
-    <CTA />
+    {cta && (
+
+        <CTA
+            data={cta.data}
+        />
+
+    )}
 
     <Footer />
 

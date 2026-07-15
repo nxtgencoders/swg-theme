@@ -1,16 +1,28 @@
 [
     {
         "id": 1,
-        "type": "docs",
-        "site_id": 1,
         "name": "Getting Started",
         "slug": "getting-started",
-        "icon": "rocket",
-        "sort_order": 1,
-        "created_at": "2026-07-14 16:00:00",
-        "description": "Learn how to install Static Website Generator, set up the Theme Starter and build your first theme.",
-        "color": "blue",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Ready for the next step?",
+                    "title": "Start building with SWG.",
+                    "subtitle": "Explore the documentation and create your first static website.",
+                    "buttons": [
+                        {
+                            "label": "Browse Docs",
+                            "url": "/docs"
+                        },
+                        {
+                            "label": "View Examples",
+                            "url": "/docs/examples"
+                        }
+                    ]
+                }
+            }
+        ]
     },
     {
         "id": 2,
@@ -23,7 +35,26 @@
         "created_at": "2026-07-14 16:00:00",
         "description": "Documentation about creating, validating and packaging SWG themes.",
         "color": "green",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Ready to build your own theme?",
+                    "title": "Start creating Astro themes for SWG.",
+                    "subtitle": "Learn how to structure, develop, validate and package themes that integrate seamlessly with Static Website Generator.",
+                    "buttons": [
+                        {
+                            "label": "Theme Guide",
+                            "url": "/docs/themes"
+                        },
+                        {
+                            "label": "Browse Examples",
+                            "url": "/blog/themes"
+                        }
+                    ]
+                }
+            }
+        ]
     },
     {
         "id": 3,
@@ -36,6 +67,25 @@
         "created_at": "2026-07-14 16:00:00",
         "description": "Technical reference documentation for the Static Website Generator platform.",
         "color": "violet",
-        "sections": []
+        "sections": [
+            {
+                "type": "cta",
+                "data": {
+                    "eyebrow": "Need more technical details?",
+                    "title": "Explore the SWG reference documentation.",
+                    "subtitle": "Find detailed information about the JSON schema, templates, sections, CLI commands and the SWG architecture.",
+                    "buttons": [
+                        {
+                            "label": "API Reference",
+                            "url": "/docs/reference"
+                        },
+                        {
+                            "label": "Getting Started",
+                            "url": "/docs/getting-started"
+                        }
+                    ]
+                }
+            }
+        ]
     }
 ]

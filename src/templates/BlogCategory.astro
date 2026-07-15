@@ -49,44 +49,8 @@ const page = {
     noindex:
         0,
 
-    sections: [
-
-        {
-            type: 'cta',
-
-            data: {
-
-                eyebrow:
-                    'Enjoyed this article?',
-
-                title:
-                    'Continue learning with SWG.',
-
-                buttons: [
-
-                    {
-                        label:
-                            'Read More Articles',
-
-                        url:
-                            '/blog'
-                    },
-
-                    {
-                        label:
-                            'Get Started',
-
-                        url:
-                            '/docs/getting-started'
-                    }
-
-                ]
-
-            }
-
-        }
-
-    ]
+    sections:
+        category.sections ?? []
 
 };
 

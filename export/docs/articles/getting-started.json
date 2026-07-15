@@ -21,6 +21,25 @@
     "sort_order": 1,
     "created_at": "2026-07-14 15:15:00",
     "updated_at": null,
-    "sections": null,
+    "sections": [
+        {
+            "type": "cta",
+            "data": {
+                "eyebrow": "Ready to continue?",
+                "title": "Build your first SWG theme.",
+                "subtitle": "Now that your development environment is ready, learn how to create your first Astro theme and master the SWG CLI.",
+                "buttons": [
+                    {
+                        "label": "Create Your First Theme",
+                        "url": "/docs/getting-started/create-your-first-theme"
+                    },
+                    {
+                        "label": "CLI Reference",
+                        "url": "/docs/getting-started/cli-reference"
+                    }
+                ]
+            }
+        }
+    ],
     "reading_time": 6
 }

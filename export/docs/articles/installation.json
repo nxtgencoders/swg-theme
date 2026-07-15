@@ -21,6 +21,25 @@
     "sort_order": 2,
     "created_at": "2026-07-14 15:30:00",
     "updated_at": null,
-    "sections": null,
+    "sections": [
+        {
+            "type": "cta",
+            "data": {
+                "eyebrow": "Installation complete?",
+                "title": "Start building your first SWG theme.",
+                "subtitle": "Your development environment is ready. Continue with creating your first theme or explore the available CLI commands.",
+                "buttons": [
+                    {
+                        "label": "Create Your First Theme",
+                        "url": "/docs/getting-started/create-your-first-theme"
+                    },
+                    {
+                        "label": "CLI Reference",
+                        "url": "/docs/getting-started/cli-reference"
+                    }
+                ]
+            }
+        }
+    ],
     "reading_time": 5
 }

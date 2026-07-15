@@ -21,6 +21,25 @@
     "sort_order": 1,
     "created_at": "2026-07-14 14:45:00",
     "updated_at": null,
-    "sections": null,
+    "sections": [
+        {
+            "type": "cta",
+            "data": {
+                "eyebrow": "Ready to build your first theme?",
+                "title": "Validate, package and publish your SWG theme.",
+                "subtitle": "Continue with the theme documentation or explore additional CLI commands and development guides.",
+                "buttons": [
+                    {
+                        "label": "Theme Documentation",
+                        "url": "/docs/themes"
+                    },
+                    {
+                        "label": "Browse Documentation",
+                        "url": "/docs"
+                    }
+                ]
+            }
+        }
+    ],
     "reading_time": 4
 }

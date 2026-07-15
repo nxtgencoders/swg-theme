@@ -21,6 +21,25 @@
     "sort_order": 5,
     "created_at": "2026-07-14 15:45:00",
     "updated_at": null,
-    "sections": null,
+    "sections": [
+        {
+            "type": "cta",
+            "data": {
+                "eyebrow": "Ready to build?",
+                "title": "Create and validate your SWG theme.",
+                "subtitle": "Put the specification into practice by building your first theme and validating it against the SWG theme contract.",
+                "buttons": [
+                    {
+                        "label": "Create Your First Theme",
+                        "url": "/docs/getting-started/create-your-first-theme"
+                    },
+                    {
+                        "label": "CLI Reference",
+                        "url": "/docs/getting-started/cli-reference"
+                    }
+                ]
+            }
+        }
+    ],
     "reading_time": 7
 }

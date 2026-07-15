@@ -9,6 +9,9 @@ import { validate }
 import { packageTheme }
     from '../scripts/package.mjs';
 
+import { syncVersion }
+    from '../scripts/release/SyncVersion.mjs';
+
 const command =
     process.argv[2];
 
@@ -26,10 +29,16 @@ try {
             await packageTheme();
             break;
 
+
+        case 'sync-version':
+
+            await syncVersion()
+            break;
+
+    break;
+
         default:
-
             usage();
-
             process.exit(1);
 
     }
@@ -73,6 +82,10 @@ function usage() {
 
     console.log(
         '  node bin/swg.mjs package'
+    );
+
+    console.log(
+        '  node bin/swg.mjs sync-version'
     );
 
     console.log('');

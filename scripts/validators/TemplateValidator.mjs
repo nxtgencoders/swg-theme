@@ -11,7 +11,9 @@ export class TemplateValidator {
         'src/templates/BlogArticle.astro',
         'src/templates/DocsIndex.astro',
         'src/templates/DocsCategory.astro',
-        'src/templates/DocsArticle.astro'
+        'src/templates/DocsArticle.astro',
+        'src/templates/Error404.astro',
+        'src/templates/Error500.astro' 
     ];
 
     /**

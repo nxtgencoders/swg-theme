@@ -1,0 +1,56 @@
+{
+    "id": 7,
+    "title": "Themes",
+    "slug": "themes",
+    "status": "published",
+    "published_at": "2026-07-15 10:00:00",
+    "created_at": "2026-07-15 10:00:00",
+    "updated_at": "2026-07-15 10:00:00",
+    "is_homepage": 0,
+    "template": "page",
+    "editor": "markdown",
+    "meta_title": "Themes | Static Website Generator",
+    "meta_description": "Build your own Astro themes for Static Website Generator. Clone the Theme Starter, customize it and package your theme for distribution.",
+    "canonical_url": "https://staticwebsitegenerator.com/themes",
+    "robots": "index,follow",
+    "og_title": "Themes | Static Website Generator",
+    "og_description": "Create custom Astro themes for Static Website Generator using the official Theme Starter.",
+    "og_image": "",
+    "template_name": "page",
+    "template_label": "Page",
+    "category_id": null,
+    "excerpt": "Build, customize and package your own Astro themes for Static Website Generator.",
+    "content": "# Themes\n\nStatic Website Generator themes are standard Astro projects. There is no proprietary templating language or custom build system to learn. If you know Astro, you already know how to build an SWG theme.\n\n## Start with the Theme Starter\n\nThe easiest way to begin is by cloning the official Theme Starter repository.\n\n```bash\ngit clone https://github.com/staticwebsitegenerator/theme-starter.git\ncd swg-theme\nnpm install\nnpm run dev\n```\n\nWithin minutes you'll have a fully working development environment containing example pages, blog articles, documentation and JSON content.\n\n## Customize Everything\n\nThe Theme Starter is intended as a foundation. Replace the layouts, components and styling with your own design while keeping the required SWG templates in place.\n\nTypical project structure:\n\n```text\nsrc/\n├── components/\n├── layouts/\n├── templates/\n├── lib/\n└── styles/\n```\n\nEverything else is completely up to you.\n\n## Build Using Astro\n\nThemes are developed like any other Astro project.\n\n```bash\nnpm run dev\n```\n\nBuild a production version with:\n\n```bash\nnpm run build\n```\n\n## Validate Your Theme\n\nBefore publishing your work, validate it against the SWG theme specification.\n\n```bash\nnpm run validate\n```\n\nThe validator checks the required templates, layouts and configuration files to ensure your theme is compatible with Static Website Generator.\n\n## Package for Distribution\n\nWhen your theme is ready, package it into an installable archive.\n\n```bash\nnpm run package\n```\n\nThe generated package can be imported directly into Static Website Generator using the Theme Manager.\n\n## One Theme, Unlimited Websites\n\nBecause SWG separates content from presentation, a single theme can be reused across multiple websites. Simply import your theme, publish your content and build your site.\n\nWhether you're creating a company website, documentation portal, blog or landing page, the same theme can power them all.",
+    "feature_image": "",
+    "tags": [
+        "themes",
+        "astro",
+        "theme starter",
+        "development",
+        "json"
+    ],
+    "reading_time": 4,
+    "sections": [
+        {
+            "type": "cta",
+            "data": {
+                "eyebrow": "Ready to build your own theme?",
+                "title": "Clone the Theme Starter and start developing.",
+                "subtitle": "Build modern Astro themes using the official SWG Theme Starter, validate them with the built-in tools and package them for distribution.",
+                "buttons": [
+                    {
+                        "label": "Getting Started",
+                        "url": "/docs/getting-started",
+                        "variant": "primary"
+                    },
+                    {
+                        "label": "Theme Documentation",
+                        "url": "/docs/themes",
+                        "variant": "secondary"
+                    }
+                ],
+                "note": "Astro Powered • JSON First • Open Source"
+            }
+        }
+    ]
+}

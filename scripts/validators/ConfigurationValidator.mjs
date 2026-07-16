@@ -145,7 +145,8 @@ validateTheme(
         'name',
         'slug',
         'version',
-        'framework'
+        'framework',
+        'preview'
 
     ];
 
@@ -174,6 +175,25 @@ validateTheme(
                 false;
 
         }
+
+    }
+
+    if (
+
+        theme.preview
+        &&
+        !fs.existsSync(
+            theme.preview
+        )
+
+    ) {
+
+        console.log(
+            ` ✗ Preview image not found: ${theme.preview}`
+        );
+
+        valid =
+            false;
 
     }
 

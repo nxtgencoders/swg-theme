@@ -100,8 +100,7 @@ export default {
         {
             assets: [
                 {
-                    path: 'dist/*.zip',
-                    label: 'SWG Theme Package'
+                    path: 'dist/*.zip'
                     }
                 ]
             }

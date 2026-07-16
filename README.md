@@ -1,5 +1,7 @@
 # SWG Theme Starter
 
+![SWG Theme Preview](public/staticwebsitegenerator-theme-official.jpg)
+
 The official Astro starter theme for **Static Website Generator (SWG)**.
 
 Build fast, modern static websites using Astro, JSON content and reusable themes.

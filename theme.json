@@ -2,12 +2,12 @@
     "name": "SWG Theme",
     "slug": "swg-theme",
     "description": "Official Astro theme for Static Website Generator.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "",
     "license": "MIT",
     "homepage": "",
     "repository": "",
-    "preview": "public/preview.webp",
+    "preview": "public/staticwebsitegenerator-theme-official.jpg",
     "framework": "tailwind",
     "astro": "^7.0.0"
 }

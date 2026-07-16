@@ -1,7 +1,7 @@
 import {
     ThemePackager
 }
-from '../package/ThemePackager.mjs';
+from '../packagers/ThemePackager.mjs';
 
 /**
  * Build the distributable SWG theme package.

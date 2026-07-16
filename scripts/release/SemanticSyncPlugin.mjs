@@ -6,8 +6,13 @@ from './SyncVersion.mjs';
 /**
  * Semantic Release prepare plugin.
  */
-export async function prepare() {
+export async function prepare(
+    {},
+    context
+) {
 
-    await syncVersion();
+    await syncVersion(
+        context.nextRelease.version
+    );
 
 }

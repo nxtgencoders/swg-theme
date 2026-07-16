@@ -2,10 +2,12 @@ import fs
     from 'node:fs';
 
 /**
- * Synchronize the version in theme.json
- * with the version from package.json.
+ * Synchronize the version in package.json
+ * and theme.json with the semantic release version.
  */
-export async function syncVersion() {
+export async function syncVersion(
+    version
+) {
 
     const packageJson =
         JSON.parse(
@@ -27,8 +29,23 @@ export async function syncVersion() {
 
         );
 
+    packageJson.version =
+        version;
+
     themeJson.version =
-        packageJson.version;
+        version;
+
+    fs.writeFileSync(
+
+        'package.json',
+
+        JSON.stringify(
+            packageJson,
+            null,
+            4
+        ) + '\n'
+
+    );
 
     fs.writeFileSync(
 

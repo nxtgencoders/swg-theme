@@ -24,7 +24,7 @@ async run(
         path.join(
             'dist',
             `${this.slug(
-                context.theme.name
+                context.theme.slug
             )}-${context.theme.version}.zip`
 
         );

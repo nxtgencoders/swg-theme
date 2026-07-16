@@ -74,6 +74,7 @@ export default {
         ],
 
         './scripts/release/SemanticSyncPlugin.mjs',
+        './scripts/release/SemanticPackagePlugin.mjs',
         /**
          * Commit generated files.
          */
@@ -93,8 +94,17 @@ export default {
                     'chore(release): ${nextRelease.version} [skip ci]'
 
             }
+        ],
+        [
+        '@semantic-release/github',
+        {
+            assets: [
+                {
+                    path: 'dist/*.zip',
+                    label: 'SWG Theme Package'
+                    }
+                ]
+            }
         ]
-
     ]
-
 };

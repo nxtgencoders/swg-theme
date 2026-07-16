@@ -1,6 +1,6 @@
 {
     "name": "swg-theme",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "private": true,
     "description": "Official Astro Theme Starter for Static Website Generator.",
     "type": "module",
@@ -9,11 +9,9 @@
         "build": "astro build",
         "preview": "astro preview",
         "check": "astro check",
-
         "validate": "node bin/swg.mjs validate",
         "package": "node bin/swg.mjs package",
         "sync-version": "node bin/swg.mjs sync-version",
-
         "release": "semantic-release",
         "release:dry": "semantic-release --dry-run"
     },

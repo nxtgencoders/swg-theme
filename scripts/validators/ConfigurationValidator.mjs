@@ -142,11 +142,15 @@ validateTheme(
 
     const required = [
 
-        'name',
-        'slug',
-        'version',
-        'framework',
-        'preview'
+            'name',
+            'slug',
+            'description',
+            'version',
+            'author',
+            'license',
+            'framework',
+            'astro',
+            'preview'
 
     ];
 

@@ -3,10 +3,10 @@
     "slug": "swg-theme",
     "description": "Official Astro theme for Static Website Generator.",
     "version": "1.0.3",
-    "author": "",
+    "author": "NxtGenCoders",
     "license": "MIT",
-    "homepage": "",
-    "repository": "",
+    "homepage": "https://nxtgencoders.com",
+    "repository": "https://github.com/nxtgencoders/swg-theme.git",
     "preview": "public/staticwebsitegenerator-theme-official.jpg",
     "framework": "tailwind",
     "astro": "^7.0.0"
